@@ -107,16 +107,6 @@ public class CompleteActivity extends AppCompatActivity {
         String[] perms = {Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO};
         if (EasyPermissions.hasPermissions(this, perms)) {
             connectToSignallingServer();
-
-            initializeSurfaceViews();
-
-            initializePeerConnectionFactory();
-
-            createVideoTrackFromCameraAndShowIt();
-
-            initializePeerConnections();
-
-            startStreamingVideo();
         } else {
             EasyPermissions.requestPermissions(this, "Need some permissions", RC_CALL, perms);
         }
@@ -210,6 +200,7 @@ public class CompleteActivity extends AppCompatActivity {
         } catch (URISyntaxException e) {
             e.printStackTrace();
         }
+        initializeSurfaceViews();
     }
     public void showMessage(String message){
         CompleteActivity.this.runOnUiThread(new Runnable() {
@@ -295,7 +286,7 @@ public class CompleteActivity extends AppCompatActivity {
         binding.surfaceView2.init(rootEglBase.getEglBaseContext(), null);
         binding.surfaceView2.setEnableHardwareScaler(true);
         binding.surfaceView2.setMirror(true);
-
+        initializePeerConnectionFactory();
         //add one more
     }
 
@@ -303,6 +294,7 @@ public class CompleteActivity extends AppCompatActivity {
         PeerConnectionFactory.initializeAndroidGlobals(this, true, true, true);
         factory = new PeerConnectionFactory(null);
         factory.setVideoHwAccelerationOptions(rootEglBase.getEglBaseContext(), rootEglBase.getEglBaseContext());
+        createVideoTrackFromCameraAndShowIt();
     }
 
     private void createVideoTrackFromCameraAndShowIt() {
@@ -318,11 +310,12 @@ public class CompleteActivity extends AppCompatActivity {
         //create an AudioSource instance
         audioSource = factory.createAudioSource(audioConstraints);
         localAudioTrack = factory.createAudioTrack("101", audioSource);
-
+        initializePeerConnections();
     }
 
     private void initializePeerConnections() {
         peerConnection = createPeerConnection(factory);
+        startStreamingVideo();
     }
 
     private void startStreamingVideo() {
