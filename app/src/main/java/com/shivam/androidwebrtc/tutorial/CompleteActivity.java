@@ -60,6 +60,7 @@ public class CompleteActivity extends AppCompatActivity {
     private boolean isChannelReady;
     private boolean isStarted;
 
+    boolean isFirstTime = true;
 
     MediaConstraints audioConstraints;
     MediaConstraints videoConstraints;
@@ -69,15 +70,12 @@ public class CompleteActivity extends AppCompatActivity {
     AudioSource audioSource;
     AudioTrack localAudioTrack;
     SurfaceTextureHelper surfaceTextureHelper;
-
     private ActivitySamplePeerConnectionBinding binding;
     private PeerConnection peerConnection;
     private EglBase rootEglBase;
     private PeerConnectionFactory factory;
     private VideoTrack videoTrackFromCamera;
 
-    //Firestore
-    FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,6 +105,12 @@ public class CompleteActivity extends AppCompatActivity {
         String[] perms = {Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO};
         if (EasyPermissions.hasPermissions(this, perms)) {
             connectToSignallingServer();
+            initializeSurfaceViews();
+            initializePeerConnectionFactory();
+            createVideoTrackFromCameraAndShowIt();
+            initializePeerConnections();
+            startStreamingVideo();
+
         } else {
             EasyPermissions.requestPermissions(this, "Need some permissions", RC_CALL, perms);
         }
@@ -139,6 +143,7 @@ public class CompleteActivity extends AppCompatActivity {
             }).on("joined", args -> {
                 Log.d(TAG, "connectToSignallingServer: joined");
                 showMessage("Joined");
+                isInitiator=true;
                 isChannelReady = true;
             }).on("log", args -> {
                 for (Object arg : args) {
@@ -155,7 +160,7 @@ public class CompleteActivity extends AppCompatActivity {
                 if(peerConnection !=null) {
                     peerConnection.close();
                 }
-               // showMessage("Closeed Peaer");
+               showMessage("Closeed Peaer");
 
             }).on("message", args -> {
 
@@ -200,7 +205,7 @@ public class CompleteActivity extends AppCompatActivity {
         } catch (URISyntaxException e) {
             e.printStackTrace();
         }
-        initializeSurfaceViews();
+
     }
     public void showMessage(String message){
         CompleteActivity.this.runOnUiThread(new Runnable() {
@@ -226,6 +231,7 @@ public class CompleteActivity extends AppCompatActivity {
                 }
             }
         }, new MediaConstraints());
+        showMessage("do anser");
     }
 
     private void maybeStart() {
@@ -239,6 +245,12 @@ public class CompleteActivity extends AppCompatActivity {
     }
 
     private void doCall() {
+        if(!isFirstTime){
+//           initializePeerConnectionFactory();
+//            createVideoTrackFromCameraAndShowIt();
+            initializePeerConnections();
+            startStreamingVideo1();
+        }
         MediaConstraints sdpMediaConstraints = new MediaConstraints();
 
         sdpMediaConstraints.mandatory.add(
@@ -255,6 +267,7 @@ public class CompleteActivity extends AppCompatActivity {
                     message.put("type", "offer");
                     message.put("sdp", sessionDescription.description);
                     sendMessage(message);
+                    showMessage("do call");
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -271,6 +284,7 @@ public class CompleteActivity extends AppCompatActivity {
             }
 
         }, sdpMediaConstraints);
+
     }
 
     private void sendMessage(Object message) {
@@ -286,7 +300,7 @@ public class CompleteActivity extends AppCompatActivity {
         binding.surfaceView2.init(rootEglBase.getEglBaseContext(), null);
         binding.surfaceView2.setEnableHardwareScaler(true);
         binding.surfaceView2.setMirror(true);
-        initializePeerConnectionFactory();
+
         //add one more
     }
 
@@ -294,7 +308,7 @@ public class CompleteActivity extends AppCompatActivity {
         PeerConnectionFactory.initializeAndroidGlobals(this, true, true, true);
         factory = new PeerConnectionFactory(null);
         factory.setVideoHwAccelerationOptions(rootEglBase.getEglBaseContext(), rootEglBase.getEglBaseContext());
-        createVideoTrackFromCameraAndShowIt();
+
     }
 
     private void createVideoTrackFromCameraAndShowIt() {
@@ -310,12 +324,12 @@ public class CompleteActivity extends AppCompatActivity {
         //create an AudioSource instance
         audioSource = factory.createAudioSource(audioConstraints);
         localAudioTrack = factory.createAudioTrack("101", audioSource);
-        initializePeerConnections();
+
     }
 
     private void initializePeerConnections() {
         peerConnection = createPeerConnection(factory);
-        startStreamingVideo();
+
     }
 
     private void startStreamingVideo() {
@@ -323,10 +337,14 @@ public class CompleteActivity extends AppCompatActivity {
         mediaStream.addTrack(videoTrackFromCamera);
         mediaStream.addTrack(localAudioTrack);
         peerConnection.addStream(mediaStream);
-        showMessage("added user media");
         sendMessage("got user media");
     }
-
+    private void startStreamingVideo1() {
+        MediaStream mediaStream = factory.createLocalMediaStream("ARDAMS");
+        mediaStream.addTrack(videoTrackFromCamera);
+        mediaStream.addTrack(localAudioTrack);
+        peerConnection.addStream(mediaStream);
+    }
     private PeerConnection createPeerConnection(PeerConnectionFactory factory) {
         ArrayList<PeerConnection.IceServer> iceServers = new ArrayList<>();
         iceServers.add(new PeerConnection.IceServer(getIntent().getStringExtra("stun")));
@@ -348,6 +366,12 @@ public class CompleteActivity extends AppCompatActivity {
             public void onIceConnectionChange(PeerConnection.IceConnectionState iceConnectionState) {
                 Log.d(TAG, "onIceConnectionChange: ");
                 //showMessage("onIceConnectionChange:"+iceConnectionState.toString());
+                if (iceConnectionState.toString().equals("DISCONNECTED")) {
+                    isStarted = false;
+                    isFirstTime=false;
+                    showMessage("disconnected");
+                }
+
             }
 
             @Override
@@ -402,7 +426,7 @@ public class CompleteActivity extends AppCompatActivity {
             @Override
             public void onRemoveStream(MediaStream mediaStream) {
                 Log.d(TAG, "onDataChannel: ");
-               // showMessage("onRemove stream");
+                showMessage("onRemove stream");
             }
 
             @Override
