@@ -63,20 +63,17 @@ public class CompleteActivity extends AppCompatActivity {
     boolean isFirstTime = true;
 
     MediaConstraints audioConstraints;
-    MediaConstraints videoConstraints;
-    MediaConstraints sdpConstraints;
-    VideoSource videoSource;
-    VideoTrack localVideoTrack;
     AudioSource audioSource;
     AudioTrack localAudioTrack;
-    SurfaceTextureHelper surfaceTextureHelper;
     private ActivitySamplePeerConnectionBinding binding;
     private PeerConnection peerConnection;
     private EglBase rootEglBase;
     private PeerConnectionFactory factory;
     private VideoTrack videoTrackFromCamera;
+    private VideoTrack videoTrackFromRemote;
+    VideoCapturer videoCapturer;
 
-
+    MediaStream localMediaStream;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -123,26 +120,26 @@ public class CompleteActivity extends AppCompatActivity {
 
             socket.on(EVENT_CONNECT, args -> {
                 Log.d(TAG, "connectToSignallingServer: connect");
-                showMessage("Create or join room");
+               // showMessage("Create or join room");
                 socket.emit("create or join", "foo");
             }).on("ipaddr", args -> {
                 Log.d(TAG, "connectToSignallingServer: ipaddr");
             }).on("created", args -> {
-                showMessage("Creatd room");
+                //showMessage("Creatd room");
                 Log.d(TAG, "connectToSignallingServer: created");
                 isInitiator = true;
             }).on("full", args -> {
                 showMessage("Full");
                 Log.d(TAG, "connectToSignallingServer: full");
             }).on("join", args -> {
-                showMessage("Somebody joining");
+              //  showMessage("Somebody joining");
                 Log.d(TAG, "connectToSignallingServer: join");
                 Log.d(TAG, "connectToSignallingServer: Another peer made a request to join room");
                 Log.d(TAG, "connectToSignallingServer: This peer is the initiator of room");
                 isChannelReady = true;
             }).on("joined", args -> {
                 Log.d(TAG, "connectToSignallingServer: joined");
-                showMessage("Joined");
+                //showMessage("Joined");
                 isInitiator=true;
                 isChannelReady = true;
             }).on("log", args -> {
@@ -156,11 +153,14 @@ public class CompleteActivity extends AppCompatActivity {
                 if (!isInitiator && !isStarted) {
                     maybeStart();
                 }
-            }).on("disconnection", args ->{
-                if(peerConnection !=null) {
-                    peerConnection.close();
-                }
-               showMessage("Closeed Peaer");
+            }).on("buddyLeft", args ->{
+//                if(peerConnection !=null) {
+//                    peerConnection.close();
+//                }
+//                isStarted = false;
+//                isFirstTime=false;
+//               showMessage("Buddy Left");
+                finish();
 
             }).on("message", args -> {
 
@@ -198,8 +198,8 @@ public class CompleteActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
             }).on(EVENT_DISCONNECT, args -> {
-             //   showMessage("Disonnected");
-                Log.d(TAG, "connectToSignallingServer: disconnect");
+//                showMessage("Disonnected");
+//                Log.d(TAG, "connectToSignallingServer: disconnect");
             });
             socket.connect();
         } catch (URISyntaxException e) {
@@ -217,6 +217,12 @@ public class CompleteActivity extends AppCompatActivity {
     }
 //MirtDPM4
     private void doAnswer() {
+        if(!isFirstTime){
+            createVideoTrackFromCameraAndShowIt();
+            initializePeerConnections();
+            startStreamingVideo1();
+            showMessage("readd");
+        }
         peerConnection.createAnswer(new SimpleSdpObserver() {
             @Override
             public void onCreateSuccess(SessionDescription sessionDescription) {
@@ -226,12 +232,13 @@ public class CompleteActivity extends AppCompatActivity {
                     message.put("type", "answer");
                     message.put("sdp", sessionDescription.description);
                     sendMessage(message);
+                    showMessage("do anser");
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
             }
         }, new MediaConstraints());
-        showMessage("do anser");
+
     }
 
     private void maybeStart() {
@@ -246,10 +253,9 @@ public class CompleteActivity extends AppCompatActivity {
 
     private void doCall() {
         if(!isFirstTime){
-//           initializePeerConnectionFactory();
-//            createVideoTrackFromCameraAndShowIt();
             initializePeerConnections();
             startStreamingVideo1();
+            showMessage("readd");
         }
         MediaConstraints sdpMediaConstraints = new MediaConstraints();
 
@@ -301,6 +307,7 @@ public class CompleteActivity extends AppCompatActivity {
         binding.surfaceView2.setEnableHardwareScaler(true);
         binding.surfaceView2.setMirror(true);
 
+
         //add one more
     }
 
@@ -313,7 +320,8 @@ public class CompleteActivity extends AppCompatActivity {
 
     private void createVideoTrackFromCameraAndShowIt() {
         audioConstraints = new MediaConstraints();
-        VideoCapturer videoCapturer = createVideoCapturer();
+        videoCapturer = createVideoCapturer();
+
         VideoSource videoSource = factory.createVideoSource(videoCapturer);
         videoCapturer.startCapture(VIDEO_RESOLUTION_WIDTH, VIDEO_RESOLUTION_HEIGHT, FPS);
 
@@ -337,7 +345,10 @@ public class CompleteActivity extends AppCompatActivity {
         mediaStream.addTrack(videoTrackFromCamera);
         mediaStream.addTrack(localAudioTrack);
         peerConnection.addStream(mediaStream);
+        localMediaStream  = mediaStream;
+        showMessage("got meadia");
         sendMessage("got user media");
+
     }
     private void startStreamingVideo1() {
         MediaStream mediaStream = factory.createLocalMediaStream("ARDAMS");
@@ -358,18 +369,19 @@ public class CompleteActivity extends AppCompatActivity {
         PeerConnection.Observer pcObserver = new PeerConnection.Observer() {
             @Override
             public void onSignalingChange(PeerConnection.SignalingState signalingState) {
-                Log.d(TAG, "onSignalingChange: ");
+                Log.d(TAG, "onSignalingChange: "+signalingState.name().toString());
               //  showMessage("onSignalingChange: "+signalingState.name());
             }
 
             @Override
             public void onIceConnectionChange(PeerConnection.IceConnectionState iceConnectionState) {
-                Log.d(TAG, "onIceConnectionChange: ");
+                Log.d(TAG, "onIceConnectionChange: maybeStart: "+iceConnectionState.toString());
                 //showMessage("onIceConnectionChange:"+iceConnectionState.toString());
-                if (iceConnectionState.toString().equals("DISCONNECTED")) {
+                if (iceConnectionState.toString().equals("DISCONNECTED")|| iceConnectionState.toString().equals("CLOSED")) {
                     isStarted = false;
                     isFirstTime=false;
-                    showMessage("disconnected");
+                    showMessage("disconnected edxe");
+                    peerConnection.dispose();
                 }
 
             }
@@ -420,7 +432,7 @@ public class CompleteActivity extends AppCompatActivity {
                 remoteAudioTrack.setEnabled(true);
                 remoteVideoTrack.setEnabled(true);
                 remoteVideoTrack.addRenderer(new VideoRenderer(binding.surfaceView2));
-
+                videoTrackFromRemote = remoteVideoTrack;
             }
 
             @Override
@@ -487,8 +499,19 @@ public class CompleteActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
+        try {
+            videoCapturer.stopCapture();
+            binding.surfaceView.release();
+            binding.surfaceView2.release();
+         //   localMediaStream.dispose();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         super.onBackPressed();
-        peerConnection.close();
-        socket.disconnect();
+        //        binding.surfaceView2.release();
+//        videoTrackFromCamera.dispose();
+//        factory.dispose();
+       socket.disconnect();
+
     }
 }
