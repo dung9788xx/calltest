@@ -1,6 +1,6 @@
 [
     {
-        "merged": "/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_sample_peer_connection.xml",
-        "source": "/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/res/layout/activity_sample_peer_connection.xml"
+        "merged": "/home/dungtv/Documents/PhpProject/calltest/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_sample_peer_connection.xml",
+        "source": "/home/dungtv/Documents/PhpProject/calltest/app/src/main/res/layout/activity_sample_peer_connection.xml"
     }
 ]

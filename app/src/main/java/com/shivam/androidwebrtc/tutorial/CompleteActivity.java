@@ -60,25 +60,22 @@ public class CompleteActivity extends AppCompatActivity {
     private boolean isChannelReady;
     private boolean isStarted;
 
+    boolean isFirstTime = true;
 
     MediaConstraints audioConstraints;
-    MediaConstraints videoConstraints;
-    MediaConstraints sdpConstraints;
-    VideoSource videoSource;
-    VideoTrack localVideoTrack;
     AudioSource audioSource;
     AudioTrack localAudioTrack;
-    SurfaceTextureHelper surfaceTextureHelper;
-
     private ActivitySamplePeerConnectionBinding binding;
     private PeerConnection peerConnection;
     private EglBase rootEglBase;
     private PeerConnectionFactory factory;
     private VideoTrack videoTrackFromCamera;
-
-    //Firestore
-    FirebaseFirestore db = FirebaseFirestore.getInstance();
-
+    private VideoTrack videoTrackFromRemote;
+    VideoCapturer videoCapturer;
+    String roomId = "";
+    MediaStream localMediaStream;
+    AudioTrack remoteAudioTrack;
+    String que="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -95,8 +92,9 @@ public class CompleteActivity extends AppCompatActivity {
 
     @Override
     protected void onDestroy() {
+        peerConnection.close();
         if (socket != null) {
-            sendMessage("bye");
+            socket.emit("leftRoom",roomId);
             socket.disconnect();
         }
         super.onDestroy();
@@ -106,7 +104,14 @@ public class CompleteActivity extends AppCompatActivity {
     private void start() {
         String[] perms = {Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO};
         if (EasyPermissions.hasPermissions(this, perms)) {
+
             connectToSignallingServer();
+            initializeSurfaceViews();
+            initializePeerConnectionFactory();
+            createVideoTrackFromCameraAndShowIt();
+            initializePeerConnections();
+            startStreamingVideo();
+
         } else {
             EasyPermissions.requestPermissions(this, "Need some permissions", RC_CALL, perms);
         }
@@ -119,31 +124,32 @@ public class CompleteActivity extends AppCompatActivity {
 
             socket.on(EVENT_CONNECT, args -> {
                 Log.d(TAG, "connectToSignallingServer: connect");
-                showMessage("Create or join room");
-                socket.emit("create or join", "foo");
+               // showMessage("Create or join room");
+//                socket.emit("create or join", "foo");
             }).on("ipaddr", args -> {
                 Log.d(TAG, "connectToSignallingServer: ipaddr");
             }).on("created", args -> {
-                showMessage("Creatd room");
+                //showMessage("Creatd room");
                 Log.d(TAG, "connectToSignallingServer: created");
                 isInitiator = true;
             }).on("full", args -> {
                 showMessage("Full");
                 Log.d(TAG, "connectToSignallingServer: full");
             }).on("join", args -> {
-                showMessage("Somebody joining");
+              //  showMessage("Somebody joining");
                 Log.d(TAG, "connectToSignallingServer: join");
                 Log.d(TAG, "connectToSignallingServer: Another peer made a request to join room");
                 Log.d(TAG, "connectToSignallingServer: This peer is the initiator of room");
                 isChannelReady = true;
             }).on("joined", args -> {
+                 roomId  =  (String) args[0];
                 Log.d(TAG, "connectToSignallingServer: joined");
-                showMessage("Joined");
+                //showMessage("Joined");
+                isInitiator=true;
                 isChannelReady = true;
-            }).on("log", args -> {
-                for (Object arg : args) {
-                    Log.d(TAG, "connectToSignallingServer: " + String.valueOf(arg));
-                }
+            }).on("letStartCall", args -> {
+               // showMessage("starting");
+                maybeStart();
             }).on("message", args -> {
                 Log.d(TAG, "connectToSignallingServer: got a message");
             }).on("ready", args ->{
@@ -151,24 +157,29 @@ public class CompleteActivity extends AppCompatActivity {
                 if (!isInitiator && !isStarted) {
                     maybeStart();
                 }
-            }).on("disconnection", args ->{
-                if(peerConnection !=null) {
-                    peerConnection.close();
-                }
-               // showMessage("Closeed Peaer");
+            }).on("buddyLeft", args ->{
+                showMessage("Buddy left");
+                peerConnection.close();
+                    finish();
 
             }).on("message", args -> {
 
                 try {
                     if (args[0] instanceof String) {
+                        showMessage("recemessage");
                         String message = (String) args[0];
-                        if (message.equals("got user media")) {
+                        if (message.equals("letStartCall")) {
                             maybeStart();
+                        }
+                        if (message.equals("retry")) {
+
+                            doCall();
                         }
                     } else {
                         JSONObject message = (JSONObject) args[0];
                         Log.d(TAG, "connectToSignallingServer: got message " + message);
                         if (message.getString("type").equals("offer")) {
+                            isStarted=true;
                            // showMessage("Have offer");
                             Log.d(TAG, "connectToSignallingServer: received an offer " + isInitiator + " " + isStarted);
                             if (!isInitiator && !isStarted) {
@@ -177,13 +188,25 @@ public class CompleteActivity extends AppCompatActivity {
                             peerConnection.setRemoteDescription(new SimpleSdpObserver(), new SessionDescription(OFFER, message.getString("sdp")));
                             doAnswer();
                         } else if (message.getString("type").equals("answer") && isStarted) {
-                           // showMessage("Have answer");
+                          // showMessage("Have answer");
                             peerConnection.setRemoteDescription(new SimpleSdpObserver(), new SessionDescription(ANSWER, message.getString("sdp")));
                         } else if (message.getString("type").equals("candidate") && isStarted) {
                            // showMessage("Have candidate");
                             Log.d(TAG, "connectToSignallingServer: receiving candidates");
                             IceCandidate candidate = new IceCandidate(message.getString("id"), message.getInt("label"), message.getString("candidate"));
+                            Log.d("aaaa",message.getString("candidate"));
                             peerConnection.addIceCandidate(candidate);
+                        }else{
+//                            Log.d("LOL:",message.toString());
+//                            if (message.getString("type").equals("candidate") && isStarted) {
+//                                Log.d("LOL1aaaaaa:","sra:"+isStarted);
+//                            }
+//
+//
+//                            if (message.getString("message").equals("retry")){
+//                                showMessage("Retry");
+//                                doCall();
+//                            }
                         }
                         /*else if (message === 'bye' && isStarted) {
                         handleRemoteHangup();
@@ -193,14 +216,13 @@ public class CompleteActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
             }).on(EVENT_DISCONNECT, args -> {
-             //   showMessage("Disonnected");
-                Log.d(TAG, "connectToSignallingServer: disconnect");
+//                showMessage("Disonnected");
+//                Log.d(TAG, "connectToSignallingServer: disconnect");
             });
             socket.connect();
         } catch (URISyntaxException e) {
             e.printStackTrace();
         }
-        initializeSurfaceViews();
     }
     public void showMessage(String message){
         CompleteActivity.this.runOnUiThread(new Runnable() {
@@ -215,10 +237,21 @@ public class CompleteActivity extends AppCompatActivity {
         peerConnection.createAnswer(new SimpleSdpObserver() {
             @Override
             public void onCreateSuccess(SessionDescription sessionDescription) {
-                peerConnection.setLocalDescription(new SimpleSdpObserver(), sessionDescription);
+                peerConnection.setLocalDescription(new SimpleSdpObserver(){
+                    @Override
+                    public void onCreateFailure(String s) {
+                        showMessage("fail");
+                    }
+
+                    @Override
+                    public void onSetFailure(String s) {
+                        showMessage("fail");
+                    }
+                }, sessionDescription);
                 JSONObject message = new JSONObject();
                 try {
                     message.put("type", "answer");
+                    message.put("roomId", roomId);
                     message.put("sdp", sessionDescription.description);
                     sendMessage(message);
                 } catch (JSONException e) {
@@ -226,6 +259,7 @@ public class CompleteActivity extends AppCompatActivity {
                 }
             }
         }, new MediaConstraints());
+
     }
 
     private void maybeStart() {
@@ -249,9 +283,20 @@ public class CompleteActivity extends AppCompatActivity {
             @Override
             public void onCreateSuccess(SessionDescription sessionDescription) {
                 Log.d(TAG, "onCreateSuccess: ");
-                peerConnection.setLocalDescription(new SimpleSdpObserver(), sessionDescription);
+                peerConnection.setLocalDescription(new SimpleSdpObserver(){
+                    @Override
+                    public void onCreateFailure(String s) {
+                        showMessage("fail");
+                    }
+
+                    @Override
+                    public void onSetFailure(String s) {
+                        showMessage("fail");
+                    }
+                }, sessionDescription);
                 JSONObject message = new JSONObject();
                 try {
+                    message.put("roomId", roomId);
                     message.put("type", "offer");
                     message.put("sdp", sessionDescription.description);
                     sendMessage(message);
@@ -286,7 +331,7 @@ public class CompleteActivity extends AppCompatActivity {
         binding.surfaceView2.init(rootEglBase.getEglBaseContext(), null);
         binding.surfaceView2.setEnableHardwareScaler(true);
         binding.surfaceView2.setMirror(true);
-        initializePeerConnectionFactory();
+
         //add one more
     }
 
@@ -294,12 +339,12 @@ public class CompleteActivity extends AppCompatActivity {
         PeerConnectionFactory.initializeAndroidGlobals(this, true, true, true);
         factory = new PeerConnectionFactory(null);
         factory.setVideoHwAccelerationOptions(rootEglBase.getEglBaseContext(), rootEglBase.getEglBaseContext());
-        createVideoTrackFromCameraAndShowIt();
     }
 
     private void createVideoTrackFromCameraAndShowIt() {
         audioConstraints = new MediaConstraints();
-        VideoCapturer videoCapturer = createVideoCapturer();
+        videoCapturer = createVideoCapturer();
+
         VideoSource videoSource = factory.createVideoSource(videoCapturer);
         videoCapturer.startCapture(VIDEO_RESOLUTION_WIDTH, VIDEO_RESOLUTION_HEIGHT, FPS);
 
@@ -310,12 +355,10 @@ public class CompleteActivity extends AppCompatActivity {
         //create an AudioSource instance
         audioSource = factory.createAudioSource(audioConstraints);
         localAudioTrack = factory.createAudioTrack("101", audioSource);
-        initializePeerConnections();
     }
 
     private void initializePeerConnections() {
         peerConnection = createPeerConnection(factory);
-        startStreamingVideo();
     }
 
     private void startStreamingVideo() {
@@ -323,31 +366,41 @@ public class CompleteActivity extends AppCompatActivity {
         mediaStream.addTrack(videoTrackFromCamera);
         mediaStream.addTrack(localAudioTrack);
         peerConnection.addStream(mediaStream);
-        showMessage("added user media");
-        sendMessage("got user media");
+        localMediaStream  = mediaStream;
+       // showMessage("got meadia");
+        socket.emit("joinCallQueue");
+        Log.d("xxxxxxaaaaa:",que);
     }
-
+    private void startStreamingVideo1() {
+        MediaStream mediaStream = factory.createLocalMediaStream("ARDAMS");
+        mediaStream.addTrack(videoTrackFromCamera);
+        mediaStream.addTrack(localAudioTrack);
+        peerConnection.addStream(mediaStream);
+    }
     private PeerConnection createPeerConnection(PeerConnectionFactory factory) {
         ArrayList<PeerConnection.IceServer> iceServers = new ArrayList<>();
         iceServers.add(new PeerConnection.IceServer(getIntent().getStringExtra("stun")));
         iceServers.add(new PeerConnection.IceServer(getIntent().getStringExtra("turn"), getIntent().getStringExtra("user"),getIntent().getStringExtra("pass")));
         PeerConnection.RTCConfiguration rtcConfig = new PeerConnection.RTCConfiguration(iceServers);
-       // rtcConfig.iceTransportsType = PeerConnection.IceTransportsType.RELAY;
-        //rtcConfig.tcpCandidatePolicy = PeerConnection.TcpCandidatePolicy.DISABLED;
-        //rtcConfig.continualGatheringPolicy=PeerConnection.ContinualGatheringPolicy.GATHER_CONTINUALLY;
         MediaConstraints pcConstraints = new MediaConstraints();
 
         PeerConnection.Observer pcObserver = new PeerConnection.Observer() {
             @Override
             public void onSignalingChange(PeerConnection.SignalingState signalingState) {
-                Log.d(TAG, "onSignalingChange: ");
+                Log.d(TAG, "onSignalingChange: "+signalingState.name().toString());
               //  showMessage("onSignalingChange: "+signalingState.name());
             }
 
             @Override
             public void onIceConnectionChange(PeerConnection.IceConnectionState iceConnectionState) {
-                Log.d(TAG, "onIceConnectionChange: ");
+                Log.d(TAG, "onIceConnectionChange: maybeStart: "+iceConnectionState.toString());
                 //showMessage("onIceConnectionChange:"+iceConnectionState.toString());
+                if (iceConnectionState.toString().equals("DISCONNECTED")|| iceConnectionState.toString().equals("CLOSED")) {
+                    showMessage("Buddy Left");
+                    peerConnection.close();
+                    finish();
+                }
+
             }
 
             @Override
@@ -365,17 +418,18 @@ public class CompleteActivity extends AppCompatActivity {
             @Override
             public void onIceCandidate(IceCandidate iceCandidate) {
                 Log.d(TAG, "onIceCandidate: ");
-              //  showMessage("On candidate ");
                 JSONObject message = new JSONObject();
 
                 try {
+                    message.put("roomId", roomId);
                     message.put("type", "candidate");
                     message.put("label", iceCandidate.sdpMLineIndex);
                     message.put("id", iceCandidate.sdpMid);
                     message.put("candidate", iceCandidate.sdp);
 
                     Log.d(TAG, "onIceCandidate: sending candidate " + message);
-                    sendMessage(message);
+                       sendMessage(message);
+                    //   showMessage("send candidate");
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -389,26 +443,26 @@ public class CompleteActivity extends AppCompatActivity {
 
             @Override
             public void onAddStream(MediaStream mediaStream) {
-                showMessage("Have meadi stream from server"+mediaStream.videoTracks.get(0).state().toString());
+           //     showMessage("Have meadi stream from server"+mediaStream.videoTracks.get(0).state().toString());
                 Log.d(TAG, "onAddStream: " + mediaStream.videoTracks.size());
                 VideoTrack remoteVideoTrack = mediaStream.videoTracks.get(0);
-                AudioTrack remoteAudioTrack = mediaStream.audioTracks.get(0);
+                remoteAudioTrack = mediaStream.audioTracks.get(0);
                 remoteAudioTrack.setEnabled(true);
                 remoteVideoTrack.setEnabled(true);
                 remoteVideoTrack.addRenderer(new VideoRenderer(binding.surfaceView2));
-
+                videoTrackFromRemote = remoteVideoTrack;
             }
 
             @Override
             public void onRemoveStream(MediaStream mediaStream) {
                 Log.d(TAG, "onDataChannel: ");
-               // showMessage("onRemove stream");
+              //  showMessage("onRemove stream");
             }
 
             @Override
             public void onDataChannel(DataChannel dataChannel) {
                 Log.d(TAG, "onDataChannel: ");
-                showMessage("onDataChannel");
+            //    showMessage("onDataChannel");
             }
 
             @Override
@@ -464,7 +518,5 @@ public class CompleteActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        peerConnection.close();
-        socket.disconnect();
     }
 }

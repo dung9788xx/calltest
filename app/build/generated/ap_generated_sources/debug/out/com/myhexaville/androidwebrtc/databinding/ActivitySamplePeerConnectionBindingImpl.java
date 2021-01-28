@@ -15,8 +15,8 @@ public class ActivitySamplePeerConnectionBindingImpl extends ActivitySamplePeerC
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
         sViewsWithIds.put(R.id.toolbar, 1);
-        sViewsWithIds.put(R.id.surface_view, 2);
-        sViewsWithIds.put(R.id.surface_view2, 3);
+        sViewsWithIds.put(R.id.surface_view2, 2);
+        sViewsWithIds.put(R.id.surface_view, 3);
     }
     // views
     @NonNull
@@ -31,8 +31,8 @@ public class ActivitySamplePeerConnectionBindingImpl extends ActivitySamplePeerC
     }
     private ActivitySamplePeerConnectionBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (org.webrtc.SurfaceViewRenderer) bindings[2]
             , (org.webrtc.SurfaceViewRenderer) bindings[3]
+            , (org.webrtc.SurfaceViewRenderer) bindings[2]
             , (androidx.appcompat.widget.Toolbar) bindings[1]
             );
         this.mboundView0 = (androidx.coordinatorlayout.widget.CoordinatorLayout) bindings[0];

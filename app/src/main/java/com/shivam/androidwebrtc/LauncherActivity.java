@@ -39,6 +39,5 @@ public class LauncherActivity extends AppCompatActivity {
         t.putExtra("user", edtUser.getText().toString());
         t.putExtra("pass", edtPass.getText().toString());
         startActivity(t);
-
     }
 }

@@ -6,194 +6,194 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="16"
-8-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml
+8-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="27" />
-9-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml
+9-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml
 10
 11    <uses-feature android:name="android.hardware.camera" />
-11-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:5:5-60
-11-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:5:19-57
+11-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:5:5-60
+11-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:5:19-57
 12    <uses-feature android:name="android.hardware.camera.autofocus" />
-12-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:6:5-70
-12-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:6:19-67
+12-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:6:5-70
+12-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:6:19-67
 13    <uses-feature
-13-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:7:5-9:35
+13-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:7:5-9:35
 14        android:glEsVersion="0x00020000"
-14-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:8:9-41
+14-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:8:9-41
 15        android:required="true" />
-15-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:9:9-32
+15-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:9:9-32
 16
 17    <uses-permission android:name="android.permission.CAMERA" />
-17-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:11:5-65
-17-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:11:22-62
+17-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:11:5-65
+17-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:11:22-62
 18    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
-18-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:12:5-79
-18-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:12:22-76
+18-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:12:5-79
+18-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:12:22-76
 19    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
-19-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:13:5-80
-19-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:13:22-77
+19-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:13:5-80
+19-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:13:22-77
 20    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-20-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:14:5-71
-20-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:14:22-68
+20-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:14:5-71
+20-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:14:22-68
 21    <uses-permission android:name="android.permission.INTERNET" />
-21-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:15:5-67
-21-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:15:22-64
+21-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:15:5-67
+21-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:15:22-64
 22    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-22-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:16:5-81
-22-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:16:22-78
+22-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:16:5-81
+22-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:16:22-78
 23    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-23-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:17:5-79
-23-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:17:22-76
+23-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:17:5-79
+23-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:17:22-76
 24    <uses-permission android:name="android.permission.BLUETOOTH" />
-24-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:18:5-68
-24-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:18:22-65
+24-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:18:5-68
+24-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:18:22-65
 25    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-25-->[com.myhexaville:smart-image-picker:1.0.4] /home/dungdemo/.gradle/caches/transforms-2/files-2.1/0da366fd918232bb684c2e2006efd0ac/jetified-smart-image-picker-1.0.4/AndroidManifest.xml:12:5-80
-25-->[com.myhexaville:smart-image-picker:1.0.4] /home/dungdemo/.gradle/caches/transforms-2/files-2.1/0da366fd918232bb684c2e2006efd0ac/jetified-smart-image-picker-1.0.4/AndroidManifest.xml:12:22-77
+25-->[com.myhexaville:smart-image-picker:1.0.4] /home/dungtv/.gradle/caches/transforms-2/files-2.1/ba7820a327814d8ffd06192b1883e2dd/jetified-smart-image-picker-1.0.4/AndroidManifest.xml:12:5-80
+25-->[com.myhexaville:smart-image-picker:1.0.4] /home/dungtv/.gradle/caches/transforms-2/files-2.1/ba7820a327814d8ffd06192b1883e2dd/jetified-smart-image-picker-1.0.4/AndroidManifest.xml:12:22-77
 26
 27    <application
-27-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:20:5-50:19
+27-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:20:5-50:19
 28        android:name="androidx.multidex.MultiDexApplication"
 29        android:allowBackup="true"
-29-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:21:9-35
+29-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:21:9-35
 30        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-30-->[androidx.core:core:1.0.0] /home/dungdemo/.gradle/caches/transforms-2/files-2.1/896c349e2145d3162f06e2fa216401d3/core-1.0.0/AndroidManifest.xml:22:18-86
+30-->[androidx.core:core:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/896c349e2145d3162f06e2fa216401d3/core-1.0.0/AndroidManifest.xml:22:18-86
 31        android:debuggable="true"
 32        android:icon="@mipmap/ic_launcher"
-32-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:22:9-43
+32-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:22:9-43
 33        android:label="@string/app_name"
-33-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:23:9-41
+33-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:23:9-41
 34        android:supportsRtl="true"
-34-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:24:9-35
+34-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:24:9-35
 35        android:theme="@style/AppTheme" >
-35-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:25:9-40
+35-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:25:9-40
 36        <activity
-36-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:26:9-29:55
+36-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:26:9-29:55
 37            android:name="com.shivam.androidwebrtc.app_rtc_sample.main.AppRTCMainActivity"
-37-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:27:13-91
+37-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:27:13-91
 38            android:label="@string/app_name"
-38-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:28:13-45
+38-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:28:13-45
 39            android:windowSoftInputMode="adjustPan" />
-39-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:29:13-52
+39-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:29:13-52
 40        <activity
-40-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:30:9-35:52
+40-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:30:9-35:52
 41            android:name="com.shivam.androidwebrtc.app_rtc_sample.call.CallActivity"
-41-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:31:13-85
+41-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:31:13-85
 42            android:configChanges="orientation|screenSize"
-42-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:32:13-59
+42-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:32:13-59
 43            android:label="@string/app_name"
-43-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:33:13-45
+43-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:33:13-45
 44            android:screenOrientation="fullUser"
-44-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:34:13-49
+44-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:34:13-49
 45            android:theme="@style/AppTheme.Call" />
-45-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:35:13-49
+45-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:35:13-49
 46        <activity
-46-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:36:9-45:20
+46-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:36:9-45:20
 47            android:name="com.shivam.androidwebrtc.LauncherActivity"
-47-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:37:13-69
+47-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:37:13-69
 48            android:label="@string/title_activity_launch"
-48-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:38:13-58
+48-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:38:13-58
 49            android:theme="@style/AppTheme.NoActionBar" >
-49-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:39:13-56
+49-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:39:13-56
 50            <intent-filter>
-50-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:40:13-44:29
+50-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:40:13-44:29
 51                <action android:name="android.intent.action.MAIN" />
-51-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:41:17-69
-51-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:41:25-66
+51-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:41:17-69
+51-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:41:25-66
 52
 53                <category android:name="android.intent.category.LAUNCHER" />
-53-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:43:17-77
-53-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:43:27-74
+53-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:43:17-77
+53-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:43:27-74
 54            </intent-filter>
 55        </activity>
 56        <activity
-56-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:46:9-49:68
+56-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:46:9-49:68
 57            android:name="com.shivam.androidwebrtc.tutorial.CompleteActivity"
-57-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:47:13-78
+57-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:47:13-78
 58            android:label="@string/title_activity_complete"
-58-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:48:13-60
+58-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:48:13-60
 59            android:theme="@style/AppTheme.NoActionBar" />
-59-->/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/src/main/AndroidManifest.xml:49:13-56
+59-->/home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:49:13-56
 60        <activity
-60-->[com.myhexaville:smart-image-picker:1.0.4] /home/dungdemo/.gradle/caches/transforms-2/files-2.1/0da366fd918232bb684c2e2006efd0ac/jetified-smart-image-picker-1.0.4/AndroidManifest.xml:18:9-21:47
+60-->[com.myhexaville:smart-image-picker:1.0.4] /home/dungtv/.gradle/caches/transforms-2/files-2.1/ba7820a327814d8ffd06192b1883e2dd/jetified-smart-image-picker-1.0.4/AndroidManifest.xml:18:9-21:47
 61            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
-61-->[com.myhexaville:smart-image-picker:1.0.4] /home/dungdemo/.gradle/caches/transforms-2/files-2.1/0da366fd918232bb684c2e2006efd0ac/jetified-smart-image-picker-1.0.4/AndroidManifest.xml:19:13-76
+61-->[com.myhexaville:smart-image-picker:1.0.4] /home/dungtv/.gradle/caches/transforms-2/files-2.1/ba7820a327814d8ffd06192b1883e2dd/jetified-smart-image-picker-1.0.4/AndroidManifest.xml:19:13-76
 62            android:screenOrientation="portrait"
-62-->[com.myhexaville:smart-image-picker:1.0.4] /home/dungdemo/.gradle/caches/transforms-2/files-2.1/0da366fd918232bb684c2e2006efd0ac/jetified-smart-image-picker-1.0.4/AndroidManifest.xml:20:13-49
+62-->[com.myhexaville:smart-image-picker:1.0.4] /home/dungtv/.gradle/caches/transforms-2/files-2.1/ba7820a327814d8ffd06192b1883e2dd/jetified-smart-image-picker-1.0.4/AndroidManifest.xml:20:13-49
 63            android:theme="@style/AppTheme" />
-63-->[com.myhexaville:smart-image-picker:1.0.4] /home/dungdemo/.gradle/caches/transforms-2/files-2.1/0da366fd918232bb684c2e2006efd0ac/jetified-smart-image-picker-1.0.4/AndroidManifest.xml:21:13-44
+63-->[com.myhexaville:smart-image-picker:1.0.4] /home/dungtv/.gradle/caches/transforms-2/files-2.1/ba7820a327814d8ffd06192b1883e2dd/jetified-smart-image-picker-1.0.4/AndroidManifest.xml:21:13-44
 64
 65        <provider
-65-->[com.myhexaville:smart-image-picker:1.0.4] /home/dungdemo/.gradle/caches/transforms-2/files-2.1/0da366fd918232bb684c2e2006efd0ac/jetified-smart-image-picker-1.0.4/AndroidManifest.xml:23:9-31:20
+65-->[com.myhexaville:smart-image-picker:1.0.4] /home/dungtv/.gradle/caches/transforms-2/files-2.1/ba7820a327814d8ffd06192b1883e2dd/jetified-smart-image-picker-1.0.4/AndroidManifest.xml:23:9-31:20
 66            android:name="com.myhexaville.smartimagepicker.CustomFileProvider"
-66-->[com.myhexaville:smart-image-picker:1.0.4] /home/dungdemo/.gradle/caches/transforms-2/files-2.1/0da366fd918232bb684c2e2006efd0ac/jetified-smart-image-picker-1.0.4/AndroidManifest.xml:24:13-79
+66-->[com.myhexaville:smart-image-picker:1.0.4] /home/dungtv/.gradle/caches/transforms-2/files-2.1/ba7820a327814d8ffd06192b1883e2dd/jetified-smart-image-picker-1.0.4/AndroidManifest.xml:24:13-79
 67            android:authorities="com.myhexaville.androidwebrtc.smart-image-picket-provider"
-67-->[com.myhexaville:smart-image-picker:1.0.4] /home/dungdemo/.gradle/caches/transforms-2/files-2.1/0da366fd918232bb684c2e2006efd0ac/jetified-smart-image-picker-1.0.4/AndroidManifest.xml:25:13-79
+67-->[com.myhexaville:smart-image-picker:1.0.4] /home/dungtv/.gradle/caches/transforms-2/files-2.1/ba7820a327814d8ffd06192b1883e2dd/jetified-smart-image-picker-1.0.4/AndroidManifest.xml:25:13-79
 68            android:exported="false"
-68-->[com.myhexaville:smart-image-picker:1.0.4] /home/dungdemo/.gradle/caches/transforms-2/files-2.1/0da366fd918232bb684c2e2006efd0ac/jetified-smart-image-picker-1.0.4/AndroidManifest.xml:26:13-37
+68-->[com.myhexaville:smart-image-picker:1.0.4] /home/dungtv/.gradle/caches/transforms-2/files-2.1/ba7820a327814d8ffd06192b1883e2dd/jetified-smart-image-picker-1.0.4/AndroidManifest.xml:26:13-37
 69            android:grantUriPermissions="true" >
-69-->[com.myhexaville:smart-image-picker:1.0.4] /home/dungdemo/.gradle/caches/transforms-2/files-2.1/0da366fd918232bb684c2e2006efd0ac/jetified-smart-image-picker-1.0.4/AndroidManifest.xml:27:13-47
+69-->[com.myhexaville:smart-image-picker:1.0.4] /home/dungtv/.gradle/caches/transforms-2/files-2.1/ba7820a327814d8ffd06192b1883e2dd/jetified-smart-image-picker-1.0.4/AndroidManifest.xml:27:13-47
 70            <meta-data
-70-->[com.myhexaville:smart-image-picker:1.0.4] /home/dungdemo/.gradle/caches/transforms-2/files-2.1/0da366fd918232bb684c2e2006efd0ac/jetified-smart-image-picker-1.0.4/AndroidManifest.xml:28:13-30:54
+70-->[com.myhexaville:smart-image-picker:1.0.4] /home/dungtv/.gradle/caches/transforms-2/files-2.1/ba7820a327814d8ffd06192b1883e2dd/jetified-smart-image-picker-1.0.4/AndroidManifest.xml:28:13-30:54
 71                android:name="android.support.FILE_PROVIDER_PATHS"
-71-->[com.myhexaville:smart-image-picker:1.0.4] /home/dungdemo/.gradle/caches/transforms-2/files-2.1/0da366fd918232bb684c2e2006efd0ac/jetified-smart-image-picker-1.0.4/AndroidManifest.xml:29:17-67
+71-->[com.myhexaville:smart-image-picker:1.0.4] /home/dungtv/.gradle/caches/transforms-2/files-2.1/ba7820a327814d8ffd06192b1883e2dd/jetified-smart-image-picker-1.0.4/AndroidManifest.xml:29:17-67
 72                android:resource="@xml/file_paths" />
-72-->[com.myhexaville:smart-image-picker:1.0.4] /home/dungdemo/.gradle/caches/transforms-2/files-2.1/0da366fd918232bb684c2e2006efd0ac/jetified-smart-image-picker-1.0.4/AndroidManifest.xml:30:17-51
+72-->[com.myhexaville:smart-image-picker:1.0.4] /home/dungtv/.gradle/caches/transforms-2/files-2.1/ba7820a327814d8ffd06192b1883e2dd/jetified-smart-image-picker-1.0.4/AndroidManifest.xml:30:17-51
 73        </provider>
 74
 75        <activity
-75-->[pub.devrel:easypermissions:1.1.3] /home/dungdemo/.gradle/caches/transforms-2/files-2.1/f94f147d7239cea6cad179588dc701b4/jetified-easypermissions-1.1.3/AndroidManifest.xml:12:9-16:66
+75-->[pub.devrel:easypermissions:1.1.3] /home/dungtv/.gradle/caches/transforms-2/files-2.1/a31c901936c89de01bb9e3d889d7be5e/jetified-easypermissions-1.1.3/AndroidManifest.xml:12:9-16:66
 76            android:name="pub.devrel.easypermissions.AppSettingsDialogHolderActivity"
-76-->[pub.devrel:easypermissions:1.1.3] /home/dungdemo/.gradle/caches/transforms-2/files-2.1/f94f147d7239cea6cad179588dc701b4/jetified-easypermissions-1.1.3/AndroidManifest.xml:13:13-86
+76-->[pub.devrel:easypermissions:1.1.3] /home/dungtv/.gradle/caches/transforms-2/files-2.1/a31c901936c89de01bb9e3d889d7be5e/jetified-easypermissions-1.1.3/AndroidManifest.xml:13:13-86
 77            android:exported="false"
-77-->[pub.devrel:easypermissions:1.1.3] /home/dungdemo/.gradle/caches/transforms-2/files-2.1/f94f147d7239cea6cad179588dc701b4/jetified-easypermissions-1.1.3/AndroidManifest.xml:14:13-37
+77-->[pub.devrel:easypermissions:1.1.3] /home/dungtv/.gradle/caches/transforms-2/files-2.1/a31c901936c89de01bb9e3d889d7be5e/jetified-easypermissions-1.1.3/AndroidManifest.xml:14:13-37
 78            android:label=""
-78-->[pub.devrel:easypermissions:1.1.3] /home/dungdemo/.gradle/caches/transforms-2/files-2.1/f94f147d7239cea6cad179588dc701b4/jetified-easypermissions-1.1.3/AndroidManifest.xml:15:13-29
+78-->[pub.devrel:easypermissions:1.1.3] /home/dungtv/.gradle/caches/transforms-2/files-2.1/a31c901936c89de01bb9e3d889d7be5e/jetified-easypermissions-1.1.3/AndroidManifest.xml:15:13-29
 79            android:theme="@style/EasyPermissions.Transparent" />
-79-->[pub.devrel:easypermissions:1.1.3] /home/dungdemo/.gradle/caches/transforms-2/files-2.1/f94f147d7239cea6cad179588dc701b4/jetified-easypermissions-1.1.3/AndroidManifest.xml:16:13-63
+79-->[pub.devrel:easypermissions:1.1.3] /home/dungtv/.gradle/caches/transforms-2/files-2.1/a31c901936c89de01bb9e3d889d7be5e/jetified-easypermissions-1.1.3/AndroidManifest.xml:16:13-63
 80
 81        <service
-81-->[com.google.firebase:firebase-firestore:21.4.3] /home/dungdemo/.gradle/caches/transforms-2/files-2.1/33fae7917009584402b8f7ec9de682a9/jetified-firebase-firestore-21.4.3/AndroidManifest.xml:17:9-23:19
+81-->[com.google.firebase:firebase-firestore:21.4.3] /home/dungtv/.gradle/caches/transforms-2/files-2.1/33fae7917009584402b8f7ec9de682a9/jetified-firebase-firestore-21.4.3/AndroidManifest.xml:17:9-23:19
 82            android:name="com.google.firebase.components.ComponentDiscoveryService"
-82-->[com.google.firebase:firebase-firestore:21.4.3] /home/dungdemo/.gradle/caches/transforms-2/files-2.1/33fae7917009584402b8f7ec9de682a9/jetified-firebase-firestore-21.4.3/AndroidManifest.xml:18:13-84
+82-->[com.google.firebase:firebase-firestore:21.4.3] /home/dungtv/.gradle/caches/transforms-2/files-2.1/33fae7917009584402b8f7ec9de682a9/jetified-firebase-firestore-21.4.3/AndroidManifest.xml:18:13-84
 83            android:directBootAware="true"
-83-->[com.google.firebase:firebase-common:19.3.0] /home/dungdemo/.gradle/caches/transforms-2/files-2.1/ce464bad56c20f5953bc7d2a150b2287/jetified-firebase-common-19.3.0/AndroidManifest.xml:34:13-43
+83-->[com.google.firebase:firebase-common:19.3.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/ce464bad56c20f5953bc7d2a150b2287/jetified-firebase-common-19.3.0/AndroidManifest.xml:34:13-43
 84            android:exported="false" >
-84-->[com.google.firebase:firebase-firestore:21.4.3] /home/dungdemo/.gradle/caches/transforms-2/files-2.1/33fae7917009584402b8f7ec9de682a9/jetified-firebase-firestore-21.4.3/AndroidManifest.xml:19:13-37
+84-->[com.google.firebase:firebase-firestore:21.4.3] /home/dungtv/.gradle/caches/transforms-2/files-2.1/33fae7917009584402b8f7ec9de682a9/jetified-firebase-firestore-21.4.3/AndroidManifest.xml:19:13-37
 85            <meta-data
-85-->[com.google.firebase:firebase-firestore:21.4.3] /home/dungdemo/.gradle/caches/transforms-2/files-2.1/33fae7917009584402b8f7ec9de682a9/jetified-firebase-firestore-21.4.3/AndroidManifest.xml:20:13-22:85
+85-->[com.google.firebase:firebase-firestore:21.4.3] /home/dungtv/.gradle/caches/transforms-2/files-2.1/33fae7917009584402b8f7ec9de682a9/jetified-firebase-firestore-21.4.3/AndroidManifest.xml:20:13-22:85
 86                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
-86-->[com.google.firebase:firebase-firestore:21.4.3] /home/dungdemo/.gradle/caches/transforms-2/files-2.1/33fae7917009584402b8f7ec9de682a9/jetified-firebase-firestore-21.4.3/AndroidManifest.xml:21:17-111
+86-->[com.google.firebase:firebase-firestore:21.4.3] /home/dungtv/.gradle/caches/transforms-2/files-2.1/33fae7917009584402b8f7ec9de682a9/jetified-firebase-firestore-21.4.3/AndroidManifest.xml:21:17-111
 87                android:value="com.google.firebase.components.ComponentRegistrar" />
-87-->[com.google.firebase:firebase-firestore:21.4.3] /home/dungdemo/.gradle/caches/transforms-2/files-2.1/33fae7917009584402b8f7ec9de682a9/jetified-firebase-firestore-21.4.3/AndroidManifest.xml:22:17-82
+87-->[com.google.firebase:firebase-firestore:21.4.3] /home/dungtv/.gradle/caches/transforms-2/files-2.1/33fae7917009584402b8f7ec9de682a9/jetified-firebase-firestore-21.4.3/AndroidManifest.xml:22:17-82
 88        </service>
 89
 90        <activity
-90-->[com.google.android.gms:play-services-base:17.0.0] /home/dungdemo/.gradle/caches/transforms-2/files-2.1/845fa85d8bfdbf54679b7d672d1ec2a5/jetified-play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
+90-->[com.google.android.gms:play-services-base:17.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/845fa85d8bfdbf54679b7d672d1ec2a5/jetified-play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
 91            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-91-->[com.google.android.gms:play-services-base:17.0.0] /home/dungdemo/.gradle/caches/transforms-2/files-2.1/845fa85d8bfdbf54679b7d672d1ec2a5/jetified-play-services-base-17.0.0/AndroidManifest.xml:24:13-79
+91-->[com.google.android.gms:play-services-base:17.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/845fa85d8bfdbf54679b7d672d1ec2a5/jetified-play-services-base-17.0.0/AndroidManifest.xml:24:13-79
 92            android:exported="false"
-92-->[com.google.android.gms:play-services-base:17.0.0] /home/dungdemo/.gradle/caches/transforms-2/files-2.1/845fa85d8bfdbf54679b7d672d1ec2a5/jetified-play-services-base-17.0.0/AndroidManifest.xml:25:13-37
+92-->[com.google.android.gms:play-services-base:17.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/845fa85d8bfdbf54679b7d672d1ec2a5/jetified-play-services-base-17.0.0/AndroidManifest.xml:25:13-37
 93            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-93-->[com.google.android.gms:play-services-base:17.0.0] /home/dungdemo/.gradle/caches/transforms-2/files-2.1/845fa85d8bfdbf54679b7d672d1ec2a5/jetified-play-services-base-17.0.0/AndroidManifest.xml:26:13-72
+93-->[com.google.android.gms:play-services-base:17.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/845fa85d8bfdbf54679b7d672d1ec2a5/jetified-play-services-base-17.0.0/AndroidManifest.xml:26:13-72
 94
 95        <provider
-95-->[com.google.firebase:firebase-common:19.3.0] /home/dungdemo/.gradle/caches/transforms-2/files-2.1/ce464bad56c20f5953bc7d2a150b2287/jetified-firebase-common-19.3.0/AndroidManifest.xml:26:9-30:39
+95-->[com.google.firebase:firebase-common:19.3.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/ce464bad56c20f5953bc7d2a150b2287/jetified-firebase-common-19.3.0/AndroidManifest.xml:26:9-30:39
 96            android:name="com.google.firebase.provider.FirebaseInitProvider"
-96-->[com.google.firebase:firebase-common:19.3.0] /home/dungdemo/.gradle/caches/transforms-2/files-2.1/ce464bad56c20f5953bc7d2a150b2287/jetified-firebase-common-19.3.0/AndroidManifest.xml:27:13-77
+96-->[com.google.firebase:firebase-common:19.3.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/ce464bad56c20f5953bc7d2a150b2287/jetified-firebase-common-19.3.0/AndroidManifest.xml:27:13-77
 97            android:authorities="com.myhexaville.androidwebrtc.firebaseinitprovider"
-97-->[com.google.firebase:firebase-common:19.3.0] /home/dungdemo/.gradle/caches/transforms-2/files-2.1/ce464bad56c20f5953bc7d2a150b2287/jetified-firebase-common-19.3.0/AndroidManifest.xml:28:13-72
+97-->[com.google.firebase:firebase-common:19.3.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/ce464bad56c20f5953bc7d2a150b2287/jetified-firebase-common-19.3.0/AndroidManifest.xml:28:13-72
 98            android:exported="false"
-98-->[com.google.firebase:firebase-common:19.3.0] /home/dungdemo/.gradle/caches/transforms-2/files-2.1/ce464bad56c20f5953bc7d2a150b2287/jetified-firebase-common-19.3.0/AndroidManifest.xml:29:13-37
+98-->[com.google.firebase:firebase-common:19.3.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/ce464bad56c20f5953bc7d2a150b2287/jetified-firebase-common-19.3.0/AndroidManifest.xml:29:13-37
 99            android:initOrder="100" />
-99-->[com.google.firebase:firebase-common:19.3.0] /home/dungdemo/.gradle/caches/transforms-2/files-2.1/ce464bad56c20f5953bc7d2a150b2287/jetified-firebase-common-19.3.0/AndroidManifest.xml:30:13-36
+99-->[com.google.firebase:firebase-common:19.3.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/ce464bad56c20f5953bc7d2a150b2287/jetified-firebase-common-19.3.0/AndroidManifest.xml:30:13-36
 100
 101        <meta-data
-101-->[com.google.android.gms:play-services-basement:17.0.0] /home/dungdemo/.gradle/caches/transforms-2/files-2.1/6e168249229157f99432178f85bb90f9/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+101-->[com.google.android.gms:play-services-basement:17.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/6e168249229157f99432178f85bb90f9/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
 102            android:name="com.google.android.gms.version"
-102-->[com.google.android.gms:play-services-basement:17.0.0] /home/dungdemo/.gradle/caches/transforms-2/files-2.1/6e168249229157f99432178f85bb90f9/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+102-->[com.google.android.gms:play-services-basement:17.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/6e168249229157f99432178f85bb90f9/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
 103            android:value="@integer/google_play_services_version" />
-103-->[com.google.android.gms:play-services-basement:17.0.0] /home/dungdemo/.gradle/caches/transforms-2/files-2.1/6e168249229157f99432178f85bb90f9/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+103-->[com.google.android.gms:play-services-basement:17.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/6e168249229157f99432178f85bb90f9/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
 104    </application>
 105
 106</manifest>

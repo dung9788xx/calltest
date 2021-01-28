@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/dungdemo/Downloads/AndroidWebRTC/VideoWebRTC/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ja/values-ja.xml",
+            "outputFile": "/home/dungtv/Documents/PhpProject/calltest/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ja/values-ja.xml",
             "map": [
                 {
-                    "source": "/home/dungdemo/.gradle/caches/transforms-2/files-2.1/be74a852e7d893d46ae57147185d5344/appcompat-1.0.0/res/values-ja/values-ja.xml",
+                    "source": "/home/dungtv/.gradle/caches/transforms-2/files-2.1/be74a852e7d893d46ae57147185d5344/appcompat-1.0.0/res/values-ja/values-ja.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,24 +21,7 @@
                     }
                 },
                 {
-                    "source": "/home/dungdemo/.gradle/caches/transforms-2/files-2.1/6e168249229157f99432178f85bb90f9/jetified-play-services-basement-17.0.0/res/values-ja/values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "247",
-                        "endColumns": "180",
-                        "endOffsets": "427"
-                    },
-                    "to": {
-                        "startLines": "37",
-                        "startColumns": "4",
-                        "startOffsets": "3769",
-                        "endColumns": "180",
-                        "endOffsets": "3945"
-                    }
-                },
-                {
-                    "source": "/home/dungdemo/.gradle/caches/transforms-2/files-2.1/845fa85d8bfdbf54679b7d672d1ec2a5/jetified-play-services-base-17.0.0/res/values-ja/values.xml",
+                    "source": "/home/dungtv/.gradle/caches/transforms-2/files-2.1/845fa85d8bfdbf54679b7d672d1ec2a5/jetified-play-services-base-17.0.0/res/values-ja/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -55,24 +38,24 @@
                     }
                 },
                 {
-                    "source": "/home/dungdemo/.gradle/caches/transforms-2/files-2.1/b72e5b62436acf01ab6a5ca4871c1fd9/jetified-android-image-cropper-2.6.0/res/values-ja/values-ja.xml",
+                    "source": "/home/dungtv/.gradle/caches/transforms-2/files-2.1/6e168249229157f99432178f85bb90f9/jetified-play-services-basement-17.0.0/res/values-ja/values.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,142,196,248,315,380,440,501",
-                        "endColumns": "86,53,51,66,64,59,60,65",
-                        "endOffsets": "137,191,243,310,375,435,496,562"
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "180",
+                        "endOffsets": "427"
                     },
                     "to": {
-                        "startLines": "47,48,49,50,51,52,53,54",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "5137,5224,5278,5330,5397,5462,5522,5583",
-                        "endColumns": "86,53,51,66,64,59,60,65",
-                        "endOffsets": "5219,5273,5325,5392,5457,5517,5578,5644"
+                        "startLines": "37",
+                        "startColumns": "4",
+                        "startOffsets": "3769",
+                        "endColumns": "180",
+                        "endOffsets": "3945"
                     }
                 },
                 {
-                    "source": "/home/dungdemo/.gradle/caches/transforms-2/files-2.1/896c349e2145d3162f06e2fa216401d3/core-1.0.0/res/values-ja/values-ja.xml",
+                    "source": "/home/dungtv/.gradle/caches/transforms-2/files-2.1/896c349e2145d3162f06e2fa216401d3/core-1.0.0/res/values-ja/values-ja.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -86,6 +69,23 @@
                         "startOffsets": "5727",
                         "endColumns": "100",
                         "endOffsets": "5823"
+                    }
+                },
+                {
+                    "source": "/home/dungtv/.gradle/caches/transforms-2/files-2.1/1d1cb06de02023936cdc9ffb60cd29d1/jetified-android-image-cropper-2.6.0/res/values-ja/values-ja.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,142,196,248,315,380,440,501",
+                        "endColumns": "86,53,51,66,64,59,60,65",
+                        "endOffsets": "137,191,243,310,375,435,496,562"
+                    },
+                    "to": {
+                        "startLines": "47,48,49,50,51,52,53,54",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "5137,5224,5278,5330,5397,5462,5522,5583",
+                        "endColumns": "86,53,51,66,64,59,60,65",
+                        "endOffsets": "5219,5273,5325,5392,5457,5517,5578,5644"
                     }
                 }
             ]
