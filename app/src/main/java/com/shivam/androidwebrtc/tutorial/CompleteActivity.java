@@ -1,17 +1,25 @@
 package com.shivam.androidwebrtc.tutorial;
 
 import android.Manifest;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Surface;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
+import androidx.fragment.app.Fragment;
 
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.myhexaville.androidwebrtc.R;
 import com.myhexaville.androidwebrtc.databinding.ActivitySamplePeerConnectionBinding;
+import com.shivam.androidwebrtc.LauncherActivity;
+import com.shivam.androidwebrtc.SocketListener;
+import com.shivam.androidwebrtc.SocketManager;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -34,8 +42,10 @@ import org.webrtc.VideoRenderer;
 import org.webrtc.VideoSource;
 import org.webrtc.VideoTrack;
 
+import java.lang.reflect.Array;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import io.socket.client.IO;
 import io.socket.client.Socket;
@@ -47,7 +57,7 @@ import static io.socket.client.Socket.EVENT_DISCONNECT;
 import static org.webrtc.SessionDescription.Type.ANSWER;
 import static org.webrtc.SessionDescription.Type.OFFER;
 
-public class CompleteActivity extends AppCompatActivity {
+public class CompleteActivity extends AppCompatActivity implements SocketListener {
     private static final String TAG = "CompleteActivity";
     private static final int RC_CALL = 111;
     public static final String VIDEO_TRACK_ID = "ARDAMSv0";
@@ -75,12 +85,16 @@ public class CompleteActivity extends AppCompatActivity {
     String roomId = "";
     MediaStream localMediaStream;
     AudioTrack remoteAudioTrack;
-    String que="";
+    SharedPreferences sharedPreferences ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_sample_peer_connection);
         setSupportActionBar(binding.toolbar);
+        sharedPreferences = this.getSharedPreferences("checkStarted", Context.MODE_PRIVATE);
+        roomId=getIntent().getStringExtra("roomId");
+        socket=SocketManager.getInstance().socket;
+        SocketManager.getInstance().addListener(this);
         start();
     }
 
@@ -90,22 +104,11 @@ public class CompleteActivity extends AppCompatActivity {
         EasyPermissions.onRequestPermissionsResult(requestCode, permissions, grantResults, this);
     }
 
-    @Override
-    protected void onDestroy() {
-        peerConnection.close();
-        if (socket != null) {
-            socket.emit("leftRoom",roomId);
-            socket.disconnect();
-        }
-        super.onDestroy();
-    }
 
     @AfterPermissionGranted(RC_CALL)
     private void start() {
         String[] perms = {Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO};
         if (EasyPermissions.hasPermissions(this, perms)) {
-
-            connectToSignallingServer();
             initializeSurfaceViews();
             initializePeerConnectionFactory();
             createVideoTrackFromCameraAndShowIt();
@@ -117,113 +120,6 @@ public class CompleteActivity extends AppCompatActivity {
         }
 
     }
-
-    private void connectToSignallingServer() {
-        try {
-            socket = IO.socket(getIntent().getStringExtra("node"));
-
-            socket.on(EVENT_CONNECT, args -> {
-                Log.d(TAG, "connectToSignallingServer: connect");
-               // showMessage("Create or join room");
-//                socket.emit("create or join", "foo");
-            }).on("ipaddr", args -> {
-                Log.d(TAG, "connectToSignallingServer: ipaddr");
-            }).on("created", args -> {
-                //showMessage("Creatd room");
-                Log.d(TAG, "connectToSignallingServer: created");
-                isInitiator = true;
-            }).on("full", args -> {
-                showMessage("Full");
-                Log.d(TAG, "connectToSignallingServer: full");
-            }).on("join", args -> {
-              //  showMessage("Somebody joining");
-                Log.d(TAG, "connectToSignallingServer: join");
-                Log.d(TAG, "connectToSignallingServer: Another peer made a request to join room");
-                Log.d(TAG, "connectToSignallingServer: This peer is the initiator of room");
-                isChannelReady = true;
-            }).on("joined", args -> {
-                 roomId  =  (String) args[0];
-                Log.d(TAG, "connectToSignallingServer: joined");
-                //showMessage("Joined");
-                isInitiator=true;
-                isChannelReady = true;
-            }).on("letStartCall", args -> {
-               // showMessage("starting");
-                maybeStart();
-            }).on("message", args -> {
-                Log.d(TAG, "connectToSignallingServer: got a message");
-            }).on("ready", args ->{
-                isChannelReady = true;
-                if (!isInitiator && !isStarted) {
-                    maybeStart();
-                }
-            }).on("buddyLeft", args ->{
-                showMessage("Buddy left");
-                peerConnection.close();
-                    finish();
-
-            }).on("message", args -> {
-
-                try {
-                    if (args[0] instanceof String) {
-                        showMessage("recemessage");
-                        String message = (String) args[0];
-                        if (message.equals("letStartCall")) {
-                            maybeStart();
-                        }
-                        if (message.equals("retry")) {
-
-                            doCall();
-                        }
-                    } else {
-                        JSONObject message = (JSONObject) args[0];
-                        Log.d(TAG, "connectToSignallingServer: got message " + message);
-                        if (message.getString("type").equals("offer")) {
-                            isStarted=true;
-                           // showMessage("Have offer");
-                            Log.d(TAG, "connectToSignallingServer: received an offer " + isInitiator + " " + isStarted);
-                            if (!isInitiator && !isStarted) {
-                                maybeStart();
-                            }
-                            peerConnection.setRemoteDescription(new SimpleSdpObserver(), new SessionDescription(OFFER, message.getString("sdp")));
-                            doAnswer();
-                        } else if (message.getString("type").equals("answer") && isStarted) {
-                          // showMessage("Have answer");
-                            peerConnection.setRemoteDescription(new SimpleSdpObserver(), new SessionDescription(ANSWER, message.getString("sdp")));
-                        } else if (message.getString("type").equals("candidate") && isStarted) {
-                           // showMessage("Have candidate");
-                            Log.d(TAG, "connectToSignallingServer: receiving candidates");
-                            IceCandidate candidate = new IceCandidate(message.getString("id"), message.getInt("label"), message.getString("candidate"));
-                            Log.d("aaaa",message.getString("candidate"));
-                            peerConnection.addIceCandidate(candidate);
-                        }else{
-//                            Log.d("LOL:",message.toString());
-//                            if (message.getString("type").equals("candidate") && isStarted) {
-//                                Log.d("LOL1aaaaaa:","sra:"+isStarted);
-//                            }
-//
-//
-//                            if (message.getString("message").equals("retry")){
-//                                showMessage("Retry");
-//                                doCall();
-//                            }
-                        }
-                        /*else if (message === 'bye' && isStarted) {
-                        handleRemoteHangup();
-                    }*/
-                    }
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }).on(EVENT_DISCONNECT, args -> {
-//                showMessage("Disonnected");
-//                Log.d(TAG, "connectToSignallingServer: disconnect");
-            });
-            socket.connect();
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
-        }
-    }
     public void showMessage(String message){
         CompleteActivity.this.runOnUiThread(new Runnable() {
             @Override
@@ -234,6 +130,8 @@ public class CompleteActivity extends AppCompatActivity {
     }
 //MirtDPM4
     private void doAnswer() {
+        showMessage("do anser");
+        if(peerConnection != null)
         peerConnection.createAnswer(new SimpleSdpObserver() {
             @Override
             public void onCreateSuccess(SessionDescription sessionDescription) {
@@ -263,16 +161,17 @@ public class CompleteActivity extends AppCompatActivity {
     }
 
     private void maybeStart() {
-        Log.d(TAG, "maybeStart: " + isStarted + " " + isChannelReady);
-        if (!isStarted && isChannelReady) {
-            isStarted = true;
-            if (isInitiator) {
+//        Log.d(TAG, "maybeStart: " + isStarted + " " + isChannelReady);
+//        if (!isStarted && isChannelReady) {
+//            isStarted = true;
+//            if (isInitiator) {
                 doCall();
-            }
-        }
+//            }
+//        }
     }
 
     private void doCall() {
+        showMessage("do call");
         MediaConstraints sdpMediaConstraints = new MediaConstraints();
 
         sdpMediaConstraints.mandatory.add(
@@ -319,7 +218,7 @@ public class CompleteActivity extends AppCompatActivity {
     }
 
     private void sendMessage(Object message) {
-        socket.emit("message", message);
+        SocketManager.getInstance().sendMessage(message);
     }
 
     private void initializeSurfaceViews() {
@@ -367,15 +266,10 @@ public class CompleteActivity extends AppCompatActivity {
         mediaStream.addTrack(localAudioTrack);
         peerConnection.addStream(mediaStream);
         localMediaStream  = mediaStream;
+        if(getIntent().getBooleanExtra("isDoCall", false) == true){
+            maybeStart();
+        }
        // showMessage("got meadia");
-        socket.emit("joinCallQueue");
-        Log.d("xxxxxxaaaaa:",que);
-    }
-    private void startStreamingVideo1() {
-        MediaStream mediaStream = factory.createLocalMediaStream("ARDAMS");
-        mediaStream.addTrack(videoTrackFromCamera);
-        mediaStream.addTrack(localAudioTrack);
-        peerConnection.addStream(mediaStream);
     }
     private PeerConnection createPeerConnection(PeerConnectionFactory factory) {
         ArrayList<PeerConnection.IceServer> iceServers = new ArrayList<>();
@@ -395,10 +289,8 @@ public class CompleteActivity extends AppCompatActivity {
             public void onIceConnectionChange(PeerConnection.IceConnectionState iceConnectionState) {
                 Log.d(TAG, "onIceConnectionChange: maybeStart: "+iceConnectionState.toString());
                 //showMessage("onIceConnectionChange:"+iceConnectionState.toString());
-                if (iceConnectionState.toString().equals("DISCONNECTED")|| iceConnectionState.toString().equals("CLOSED")) {
-                    showMessage("Buddy Left");
-                    peerConnection.close();
-                    finish();
+                if (iceConnectionState.toString().equals("FAILED")||iceConnectionState.toString().equals("DISCONNECTED")|| iceConnectionState.toString().equals("CLOSED")) {
+                    onBuddyLeft();
                 }
 
             }
@@ -515,8 +407,113 @@ public class CompleteActivity extends AppCompatActivity {
         return Camera2Enumerator.isSupported(this);
     }
 
+
+    @Override
+    public void onConnection() {
+
+
+    }
+
+    @Override
+    public void onDisconnect() {
+        showMessage("you have been disconect");
+        startActivity(new Intent(this, LauncherActivity.class));
+    }
+
+    @Override
+    public void onJoined() {
+    }
+
+    @Override
+    public void onLetStartCall(String roomId, Boolean isDoCall) {
+    }
+
+    @Override
+    public void onMessage(Object... args) {
+        Log.d("joiii","recivemessgae");
+        try {
+            if (args[0] instanceof String) {
+//                showMessage("recemessage");
+//                String message = (String) args[0];
+//                if (message.equals("letStartCall")) {
+//                    maybeStart();
+//                }
+//                if (message.equals("retry")) {
+//
+//                    doCall();
+//                }
+            } else {
+                JSONObject message = (JSONObject) args[0];
+                Log.d(TAG, "connectToSignallingServer: got message " + message);
+                if (message.getString("type").equals("offer")) {
+//                    isStarted=true;
+//                    // showMessage("Have offer");
+//                    Log.d(TAG, "connectToSignallingServer: received an offer " + isInitiator + " " + isStarted);
+//                    if (!isInitiator && !isStarted) {
+//                        maybeStart();
+//                    }
+                    if(peerConnection != null)
+                    peerConnection.setRemoteDescription(new SimpleSdpObserver(), new SessionDescription(OFFER, message.getString("sdp")));
+                    doAnswer();
+                } else if (message.getString("type").equals("answer")) {
+                    // showMessage("Have answer");
+                    Log.d("lol","have answer");
+
+                    if(peerConnection != null)
+                    peerConnection.setRemoteDescription(new SimpleSdpObserver(), new SessionDescription(ANSWER, message.getString("sdp")));
+                } else if (message.getString("type").equals("candidate") ) {
+
+                    // showMessage("Have candidate");
+                    Log.d("lol","reviced candidate");
+
+                    IceCandidate candidate = new IceCandidate(message.getString("id"), message.getInt("label"), message.getString("candidate"));
+                    Log.d("lol","have candidate");
+                  if(peerConnection != null)
+                    peerConnection.addIceCandidate(candidate);
+                }else{
+                    showMessage("LOLLLLLLL");
+//                            Log.d("LOL:",message.toString());
+//                            if (message.getString("type").equals("candidate") && isStarted) {
+//                                Log.d("LOL1aaaaaa:","sra:"+isStarted);
+//                            }
+//
+//
+//                            if (message.getString("message").equals("retry")){
+//                                showMessage("Retry");
+//                                doCall();
+//                            }
+                }
+                        /*else if (message === 'bye' && isStarted) {
+                        handleRemoteHangup();
+                    }*/
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void onBuddyLeft() {
+        showMessage("Buddy left");
+       // SocketManager.getInstance().socket.emit("joinCallQueue");
+//        socket.emit("leftRoom",roomId);
+//        Intent intent = new Intent(getApplicationContext(), CallingQueueActivity.class);
+//        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//        startActivity(intent);\
+        sharedPreferences.edit().putBoolean("isStarted",false).apply();
+        finishAndRemoveTask();
+    }
+
+    @Override
+    protected void onDestroy() {
+        peerConnection.close();
+        socket.emit("leftRoom",roomId);
+        sharedPreferences.edit().putBoolean("isStarted",false).apply();
+        super.onDestroy();
+    }
     @Override
     public void onBackPressed() {
         super.onBackPressed();
     }
+
 }

@@ -1,14 +1,15 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:2:1-52:12
-INJECTED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:2:1-52:12
-INJECTED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:2:1-52:12
-INJECTED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:2:1-52:12
+ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:2:1-57:12
+INJECTED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:2:1-57:12
+INJECTED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:2:1-57:12
+INJECTED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:2:1-57:12
 MERGED from [androidx.databinding:databinding-adapters:3.6.1] /home/dungtv/.gradle/caches/transforms-2/files-2.1/43e55c87fbab03d6a07e4c2e947d583b/databinding-adapters-3.6.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.databinding:databinding-runtime:3.6.1] /home/dungtv/.gradle/caches/transforms-2/files-2.1/3426653020e3a688467e285fb8ccfc3e/databinding-runtime-3.6.1/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.multidex:multidex:2.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/87b8d1cad3d1c8640f5f81bda431dd72/multidex-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/dungtv/.gradle/caches/transforms-2/files-2.1/dc5653df51271f52f93d2006d9a5e208/constraintlayout-1.1.3/AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.firebase:firebase-database:16.0.4] /home/dungtv/.gradle/caches/transforms-2/files-2.1/0151553f07d07963884dde12a9337f08/jetified-firebase-database-16.0.4/AndroidManifest.xml:15:1-25:12
+MERGED from [androidx.navigation:navigation-fragment:2.2.2] /home/dungtv/.gradle/caches/transforms-2/files-2.1/4c7f414e93a1fcd4edc3b5b50891e85b/navigation-fragment-2.2.2/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-ui:2.2.2] /home/dungtv/.gradle/caches/transforms-2/files-2.1/854d564236d235466151cdb8913f9b18/navigation-ui-2.2.2/AndroidManifest.xml:17:1-24:12
 MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] /home/dungtv/.gradle/caches/transforms-2/files-2.1/71e508f0cd8e7a743a7392e36127c6bd/jetified-rxandroid-2.0.1/AndroidManifest.xml:15:1-21:12
 MERGED from [com.google.android.material:material:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/8e2989aba5bb33106453e344a5ad2ac8/material-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.myhexaville:smart-image-picker:1.0.4] /home/dungtv/.gradle/caches/transforms-2/files-2.1/ba7820a327814d8ffd06192b1883e2dd/jetified-smart-image-picker-1.0.4/AndroidManifest.xml:2:1-34:12
@@ -17,6 +18,7 @@ MERGED from [com.theartofdev.edmodo:android-image-cropper:2.6.0] /home/dungtv/.g
 MERGED from [androidx.appcompat:appcompat:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/be74a852e7d893d46ae57147185d5344/appcompat-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/35b43c8e74aa32f7750167d83aa50c23/legacy-support-v4-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-firestore:21.4.3] /home/dungtv/.gradle/caches/transforms-2/files-2.1/33fae7917009584402b8f7ec9de682a9/jetified-firebase-firestore-21.4.3/AndroidManifest.xml:2:1-26:12
+MERGED from [androidx.multidex:multidex:2.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/87b8d1cad3d1c8640f5f81bda431dd72/multidex-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.databinding:viewbinding:3.6.1] /home/dungtv/.gradle/caches/transforms-2/files-2.1/2d2eadf478d80180e3a03a546780a5ee/jetified-viewbinding-3.6.1/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-database-collection:17.0.1] /home/dungtv/.gradle/caches/transforms-2/files-2.1/7acb28271fa685a15df05d6e7c93918d/jetified-firebase-database-collection-17.0.1/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/4a45c9078683228761045c6846344701/jetified-firebase-auth-interop-18.0.0/AndroidManifest.xml:2:1-10:12
@@ -24,53 +26,58 @@ MERGED from [com.google.android.gms:play-services-base:17.0.0] /home/dungtv/.gra
 MERGED from [com.google.firebase:firebase-common:19.3.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/ce464bad56c20f5953bc7d2a150b2287/jetified-firebase-common-19.3.0/AndroidManifest.xml:15:1-39:12
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/dd1d89e65ebfd3f60c393ba49c10deb1/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/6e168249229157f99432178f85bb90f9/jetified-play-services-basement-17.0.0/AndroidManifest.xml:17:1-28:12
-MERGED from [androidx.fragment:fragment:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/91b9d9cb7e71c10ab2478635a1c5d93f/fragment-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.2.4] /home/dungtv/.gradle/caches/transforms-2/files-2.1/95f975212710390ad631dbdb20d73894/fragment-1.2.4/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.0.1] /home/dungtv/.gradle/caches/transforms-2/files-2.1/87f238487bd250cb58bc8c640ada2e3e/transition-1.0.1/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.recyclerview:recyclerview:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/c3d3dbc878f96de1821069d6d0865926/recyclerview-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/2549dd1614b371f9a77e4ef47e7097db/vectordrawable-animated-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/5b9e0d961a43463cd36d3d0b0970a663/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/c478f80bd4ad567536aefc8101976968/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.transition:transition:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/bff26f8bf9ff63f2d7195c364e6c34a4/transition-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/9dec01b695be906b6f7039942337b1e1/vectordrawable-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.media:media:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/e6c5426b859b3c6d1a7ec370a24f0e7e/media-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/dccbc333189bbf941b741953e1a3f9ff/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/81dab606d6381131d30445e6b293ca11/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-runtime:2.2.2] /home/dungtv/.gradle/caches/transforms-2/files-2.1/1abceb749f120af26ed9676d3acef2d8/navigation-runtime-2.2.2/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.1.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/91f1000741d414e2d32b107410475f68/jetified-activity-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-common:2.2.2] /home/dungtv/.gradle/caches/transforms-2/files-2.1/03d2fc9cef1a7f7bc13903f2a3631910/navigation-common-2.2.2/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/339f1dc8c1bde9b456157112e0f4b7e8/coordinatorlayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/a77d9e58918bf2750030aac69a1dfcf6/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/21084036f77004bec3de64060098e600/slidingpanelayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.customview:customview:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/0b07a0826db5af8a2fda1f92fd2e3873/customview-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/b26138f390284d58f90b88610f6f34c1/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/b418af96d99ec3ee6beea4913d2436ab/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.loader:loader:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/81dab606d6381131d30445e6b293ca11/loader-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.core:core:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/896c349e2145d3162f06e2fa216401d3/core-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/0816fe057aadab6449d175b9f025170e/lifecycle-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/3efa8349b18e38db29ab2540d0526d73/versionedparcelable-1.0.0/AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.core:core:1.1.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/289224863560959127f92ff818916774/core-1.1.0/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/3953c30aeef62c5bdaaabdf2b62fdbea/lifecycle-runtime-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/e4bd9b193777687523303943a4029054/versionedparcelable-1.1.0/AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.cardview:cardview:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/8b0350031a72ce16202033f17dd471e1/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/36396b1fbdb1103bb32efd2dde513e3d/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-components:16.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/64ca07abbcbc78186ca1b999f5a5335a/jetified-firebase-components-16.0.0/AndroidManifest.xml:15:1-23:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/3f1ca0d4ddb8ff95c5d75eeb561077d3/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/308c366dec3536d2c325d08e36113e5e/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/b7f5752aa0acc6fff842c787e096bc60/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/fd039fa6c27596a629673c2651478af4/jetified-lifecycle-viewmodel-savedstate-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/723e2011f3743c8830c5dc1d1771483b/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/f6a4feae18ec354dcbc77e0557069d6b/jetified-savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/ef0bf9d4d2483129dffd4f48b9ce7edf/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/464eb4e2a3cad5a639b9f1a3f0b48840/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/0a265440987cc4e75053c9445cd2e39a/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/3b5d9efd4ea7fd3d66d424fb0fea7c4a/print-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/f507677c6662b00d06a76ae3071ad927/lifecycle-viewmodel-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/ace58725a593ebc3d8ac9a955443d5c1/exifinterface-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/3f1ca0d4ddb8ff95c5d75eeb561077d3/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/656cce252e6cdaaeba8fc2e27d0f43f7/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/d4240c49df792c6de24dffaa45eb5ad3/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:protolite-well-known-types:17.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/20e399eda898b815710c404b3feb4afb/jetified-protolite-well-known-types-17.0.0/AndroidManifest.xml:2:1-11:12
 MERGED from [io.grpc:grpc-android:1.21.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/7ba5d0beda8c5643417c9602f1922dd5/jetified-grpc-android-1.21.0/AndroidManifest.xml:2:1-13:12
-INJECTED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:2:1-52:12
-INJECTED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:2:1-52:12
-INJECTED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:2:1-52:12
+INJECTED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:2:1-57:12
+INJECTED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:2:1-57:12
+INJECTED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:2:1-57:12
 	package
 		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:3:5-44
 		INJECTED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml
 		INJECTED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml
-		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:2:1-52:12
+		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:2:1-57:12
 		INJECTED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml
-		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:2:1-52:12
+		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:2:1-57:12
 		INJECTED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:2:11-69
@@ -133,7 +140,7 @@ ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManife
 	android:name
 		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:18:22-65
 application
-ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:20:5-50:19
+ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:20:5-55:19
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/dungtv/.gradle/caches/transforms-2/files-2.1/dc5653df51271f52f93d2006d9a5e208/constraintlayout-1.1.3/AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/dungtv/.gradle/caches/transforms-2/files-2.1/dc5653df51271f52f93d2006d9a5e208/constraintlayout-1.1.3/AndroidManifest.xml:9:5-20
 MERGED from [com.google.android.material:material:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/8e2989aba5bb33106453e344a5ad2ac8/material-1.0.0/AndroidManifest.xml:22:5-20
@@ -154,12 +161,12 @@ MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/dungtv/.gr
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/dd1d89e65ebfd3f60c393ba49c10deb1/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/6e168249229157f99432178f85bb90f9/jetified-play-services-basement-17.0.0/AndroidManifest.xml:22:5-26:19
 MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/6e168249229157f99432178f85bb90f9/jetified-play-services-basement-17.0.0/AndroidManifest.xml:22:5-26:19
-MERGED from [androidx.core:core:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/896c349e2145d3162f06e2fa216401d3/core-1.0.0/AndroidManifest.xml:22:5-89
-MERGED from [androidx.core:core:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/896c349e2145d3162f06e2fa216401d3/core-1.0.0/AndroidManifest.xml:22:5-89
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/3efa8349b18e38db29ab2540d0526d73/versionedparcelable-1.0.0/AndroidManifest.xml:22:5-23:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/3efa8349b18e38db29ab2540d0526d73/versionedparcelable-1.0.0/AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.core:core:1.1.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/289224863560959127f92ff818916774/core-1.1.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.1.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/289224863560959127f92ff818916774/core-1.1.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/e4bd9b193777687523303943a4029054/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/e4bd9b193777687523303943a4029054/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
 	android:appComponentFactory
-		ADDED from [androidx.core:core:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/896c349e2145d3162f06e2fa216401d3/core-1.0.0/AndroidManifest.xml:22:18-86
+		ADDED from [androidx.core:core:1.1.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/289224863560959127f92ff818916774/core-1.1.0/AndroidManifest.xml:24:18-86
 	android:supportsRtl
 		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:24:9-35
 	android:label
@@ -170,52 +177,66 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/dungt
 		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:21:9-35
 	android:theme
 		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:25:9-40
+activity#com.shivam.androidwebrtc.tutorial.CallingQueueActivity
+ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:26:9-29:68
+	android:label
+		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:28:13-65
+	android:theme
+		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:29:13-56
+	android:name
+		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:27:13-82
 activity#com.shivam.androidwebrtc.app_rtc_sample.main.AppRTCMainActivity
-ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:26:9-29:55
+ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:30:9-33:55
 	android:label
-		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:28:13-45
+		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:32:13-45
 	android:windowSoftInputMode
-		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:29:13-52
+		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:33:13-52
 	android:name
-		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:27:13-91
+		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:31:13-91
 activity#com.shivam.androidwebrtc.app_rtc_sample.call.CallActivity
-ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:30:9-35:52
+ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:34:9-39:52
 	android:screenOrientation
-		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:34:13-49
+		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:38:13-49
 	android:label
-		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:33:13-45
+		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:37:13-45
 	android:configChanges
-		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:32:13-59
+		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:36:13-59
 	android:theme
-		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:35:13-49
+		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:39:13-49
 	android:name
-		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:31:13-85
+		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:35:13-85
 activity#com.shivam.androidwebrtc.LauncherActivity
-ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:36:9-45:20
+ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:40:9-49:20
 	android:label
-		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:38:13-58
+		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:42:13-58
 	android:theme
-		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:39:13-56
+		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:43:13-56
 	android:name
-		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:37:13-69
+		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:41:13-69
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:40:13-44:29
+ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:44:13-48:29
 action#android.intent.action.MAIN
-ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:41:17-69
+ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:45:17-69
 	android:name
-		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:41:25-66
+		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:45:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:43:17-77
+ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:47:17-77
 	android:name
-		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:43:27-74
+		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:47:27-74
 activity#com.shivam.androidwebrtc.tutorial.CompleteActivity
-ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:46:9-49:68
+ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:50:9-53:59
 	android:label
-		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:48:13-60
+		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:52:13-60
 	android:theme
-		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:49:13-56
+		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:53:13-56
 	android:name
-		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:47:13-78
+		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:51:13-78
+uses-library#org.apache.http.legacy
+ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:54:9-87
+	android:required
+		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:54:61-85
+	android:name
+		ADDED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml:54:23-60
 uses-sdk
 INJECTED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/dungtv/Documents/PhpProject/calltest/app/src/main/AndroidManifest.xml
@@ -224,12 +245,14 @@ MERGED from [androidx.databinding:databinding-adapters:3.6.1] /home/dungtv/.grad
 MERGED from [androidx.databinding:databinding-adapters:3.6.1] /home/dungtv/.gradle/caches/transforms-2/files-2.1/43e55c87fbab03d6a07e4c2e947d583b/databinding-adapters-3.6.1/AndroidManifest.xml:22:5-44
 MERGED from [androidx.databinding:databinding-runtime:3.6.1] /home/dungtv/.gradle/caches/transforms-2/files-2.1/3426653020e3a688467e285fb8ccfc3e/databinding-runtime-3.6.1/AndroidManifest.xml:22:5-44
 MERGED from [androidx.databinding:databinding-runtime:3.6.1] /home/dungtv/.gradle/caches/transforms-2/files-2.1/3426653020e3a688467e285fb8ccfc3e/databinding-runtime-3.6.1/AndroidManifest.xml:22:5-44
-MERGED from [androidx.multidex:multidex:2.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/87b8d1cad3d1c8640f5f81bda431dd72/multidex-2.0.0/AndroidManifest.xml:20:5-43
-MERGED from [androidx.multidex:multidex:2.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/87b8d1cad3d1c8640f5f81bda431dd72/multidex-2.0.0/AndroidManifest.xml:20:5-43
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/dungtv/.gradle/caches/transforms-2/files-2.1/dc5653df51271f52f93d2006d9a5e208/constraintlayout-1.1.3/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/dungtv/.gradle/caches/transforms-2/files-2.1/dc5653df51271f52f93d2006d9a5e208/constraintlayout-1.1.3/AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.firebase:firebase-database:16.0.4] /home/dungtv/.gradle/caches/transforms-2/files-2.1/0151553f07d07963884dde12a9337f08/jetified-firebase-database-16.0.4/AndroidManifest.xml:18:5-20:41
 MERGED from [com.google.firebase:firebase-database:16.0.4] /home/dungtv/.gradle/caches/transforms-2/files-2.1/0151553f07d07963884dde12a9337f08/jetified-firebase-database-16.0.4/AndroidManifest.xml:18:5-20:41
+MERGED from [androidx.navigation:navigation-fragment:2.2.2] /home/dungtv/.gradle/caches/transforms-2/files-2.1/4c7f414e93a1fcd4edc3b5b50891e85b/navigation-fragment-2.2.2/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-fragment:2.2.2] /home/dungtv/.gradle/caches/transforms-2/files-2.1/4c7f414e93a1fcd4edc3b5b50891e85b/navigation-fragment-2.2.2/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui:2.2.2] /home/dungtv/.gradle/caches/transforms-2/files-2.1/854d564236d235466151cdb8913f9b18/navigation-ui-2.2.2/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui:2.2.2] /home/dungtv/.gradle/caches/transforms-2/files-2.1/854d564236d235466151cdb8913f9b18/navigation-ui-2.2.2/AndroidManifest.xml:20:5-22:41
 MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] /home/dungtv/.gradle/caches/transforms-2/files-2.1/71e508f0cd8e7a743a7392e36127c6bd/jetified-rxandroid-2.0.1/AndroidManifest.xml:19:5-43
 MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] /home/dungtv/.gradle/caches/transforms-2/files-2.1/71e508f0cd8e7a743a7392e36127c6bd/jetified-rxandroid-2.0.1/AndroidManifest.xml:19:5-43
 MERGED from [com.google.android.material:material:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/8e2989aba5bb33106453e344a5ad2ac8/material-1.0.0/AndroidManifest.xml:20:5-44
@@ -246,6 +269,8 @@ MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/dungtv/.gradle/cache
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/35b43c8e74aa32f7750167d83aa50c23/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-firestore:21.4.3] /home/dungtv/.gradle/caches/transforms-2/files-2.1/33fae7917009584402b8f7ec9de682a9/jetified-firebase-firestore-21.4.3/AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:firebase-firestore:21.4.3] /home/dungtv/.gradle/caches/transforms-2/files-2.1/33fae7917009584402b8f7ec9de682a9/jetified-firebase-firestore-21.4.3/AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.multidex:multidex:2.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/87b8d1cad3d1c8640f5f81bda431dd72/multidex-2.0.0/AndroidManifest.xml:20:5-43
+MERGED from [androidx.multidex:multidex:2.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/87b8d1cad3d1c8640f5f81bda431dd72/multidex-2.0.0/AndroidManifest.xml:20:5-43
 MERGED from [androidx.databinding:viewbinding:3.6.1] /home/dungtv/.gradle/caches/transforms-2/files-2.1/2d2eadf478d80180e3a03a546780a5ee/jetified-viewbinding-3.6.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.databinding:viewbinding:3.6.1] /home/dungtv/.gradle/caches/transforms-2/files-2.1/2d2eadf478d80180e3a03a546780a5ee/jetified-viewbinding-3.6.1/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-database-collection:17.0.1] /home/dungtv/.gradle/caches/transforms-2/files-2.1/7acb28271fa685a15df05d6e7c93918d/jetified-firebase-database-collection-17.0.1/AndroidManifest.xml:5:5-7:41
@@ -260,8 +285,10 @@ MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/dungtv/.gr
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/dd1d89e65ebfd3f60c393ba49c10deb1/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/6e168249229157f99432178f85bb90f9/jetified-play-services-basement-17.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/6e168249229157f99432178f85bb90f9/jetified-play-services-basement-17.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.fragment:fragment:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/91b9d9cb7e71c10ab2478635a1c5d93f/fragment-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.fragment:fragment:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/91b9d9cb7e71c10ab2478635a1c5d93f/fragment-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.2.4] /home/dungtv/.gradle/caches/transforms-2/files-2.1/95f975212710390ad631dbdb20d73894/fragment-1.2.4/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.2.4] /home/dungtv/.gradle/caches/transforms-2/files-2.1/95f975212710390ad631dbdb20d73894/fragment-1.2.4/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.0.1] /home/dungtv/.gradle/caches/transforms-2/files-2.1/87f238487bd250cb58bc8c640ada2e3e/transition-1.0.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.1] /home/dungtv/.gradle/caches/transforms-2/files-2.1/87f238487bd250cb58bc8c640ada2e3e/transition-1.0.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.recyclerview:recyclerview:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/c3d3dbc878f96de1821069d6d0865926/recyclerview-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.recyclerview:recyclerview:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/c3d3dbc878f96de1821069d6d0865926/recyclerview-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/2549dd1614b371f9a77e4ef47e7097db/vectordrawable-animated-1.0.0/AndroidManifest.xml:20:5-44
@@ -270,14 +297,20 @@ MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/dungtv/.gradle/
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/5b9e0d961a43463cd36d3d0b0970a663/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/c478f80bd4ad567536aefc8101976968/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/c478f80bd4ad567536aefc8101976968/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.transition:transition:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/bff26f8bf9ff63f2d7195c364e6c34a4/transition-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.transition:transition:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/bff26f8bf9ff63f2d7195c364e6c34a4/transition-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/9dec01b695be906b6f7039942337b1e1/vectordrawable-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/9dec01b695be906b6f7039942337b1e1/vectordrawable-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.media:media:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/e6c5426b859b3c6d1a7ec370a24f0e7e/media-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.media:media:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/e6c5426b859b3c6d1a7ec370a24f0e7e/media-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/dccbc333189bbf941b741953e1a3f9ff/viewpager-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/dccbc333189bbf941b741953e1a3f9ff/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/81dab606d6381131d30445e6b293ca11/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/81dab606d6381131d30445e6b293ca11/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime:2.2.2] /home/dungtv/.gradle/caches/transforms-2/files-2.1/1abceb749f120af26ed9676d3acef2d8/navigation-runtime-2.2.2/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime:2.2.2] /home/dungtv/.gradle/caches/transforms-2/files-2.1/1abceb749f120af26ed9676d3acef2d8/navigation-runtime-2.2.2/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.1.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/91f1000741d414e2d32b107410475f68/jetified-activity-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.1.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/91f1000741d414e2d32b107410475f68/jetified-activity-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common:2.2.2] /home/dungtv/.gradle/caches/transforms-2/files-2.1/03d2fc9cef1a7f7bc13903f2a3631910/navigation-common-2.2.2/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common:2.2.2] /home/dungtv/.gradle/caches/transforms-2/files-2.1/03d2fc9cef1a7f7bc13903f2a3631910/navigation-common-2.2.2/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/339f1dc8c1bde9b456157112e0f4b7e8/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/339f1dc8c1bde9b456157112e0f4b7e8/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/a77d9e58918bf2750030aac69a1dfcf6/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
@@ -290,26 +323,24 @@ MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/dungtv/
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/b26138f390284d58f90b88610f6f34c1/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/b418af96d99ec3ee6beea4913d2436ab/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/b418af96d99ec3ee6beea4913d2436ab/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/81dab606d6381131d30445e6b293ca11/loader-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/81dab606d6381131d30445e6b293ca11/loader-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/896c349e2145d3162f06e2fa216401d3/core-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/896c349e2145d3162f06e2fa216401d3/core-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/0816fe057aadab6449d175b9f025170e/lifecycle-runtime-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/0816fe057aadab6449d175b9f025170e/lifecycle-runtime-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/3efa8349b18e38db29ab2540d0526d73/versionedparcelable-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/3efa8349b18e38db29ab2540d0526d73/versionedparcelable-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.1.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/289224863560959127f92ff818916774/core-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.1.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/289224863560959127f92ff818916774/core-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/3953c30aeef62c5bdaaabdf2b62fdbea/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/3953c30aeef62c5bdaaabdf2b62fdbea/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/e4bd9b193777687523303943a4029054/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/e4bd9b193777687523303943a4029054/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.cardview:cardview:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/8b0350031a72ce16202033f17dd471e1/cardview-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.cardview:cardview:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/8b0350031a72ce16202033f17dd471e1/cardview-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/36396b1fbdb1103bb32efd2dde513e3d/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/36396b1fbdb1103bb32efd2dde513e3d/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-components:16.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/64ca07abbcbc78186ca1b999f5a5335a/jetified-firebase-components-16.0.0/AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-components:16.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/64ca07abbcbc78186ca1b999f5a5335a/jetified-firebase-components-16.0.0/AndroidManifest.xml:19:5-21:41
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/3f1ca0d4ddb8ff95c5d75eeb561077d3/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/3f1ca0d4ddb8ff95c5d75eeb561077d3/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/308c366dec3536d2c325d08e36113e5e/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/308c366dec3536d2c325d08e36113e5e/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/b7f5752aa0acc6fff842c787e096bc60/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/b7f5752aa0acc6fff842c787e096bc60/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/fd039fa6c27596a629673c2651478af4/jetified-lifecycle-viewmodel-savedstate-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/fd039fa6c27596a629673c2651478af4/jetified-lifecycle-viewmodel-savedstate-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/723e2011f3743c8830c5dc1d1771483b/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/723e2011f3743c8830c5dc1d1771483b/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/f6a4feae18ec354dcbc77e0557069d6b/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/f6a4feae18ec354dcbc77e0557069d6b/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.interpolator:interpolator:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/ef0bf9d4d2483129dffd4f48b9ce7edf/interpolator-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/ef0bf9d4d2483129dffd4f48b9ce7edf/interpolator-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/464eb4e2a3cad5a639b9f1a3f0b48840/documentfile-1.0.0/AndroidManifest.xml:20:5-44
@@ -318,10 +349,14 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/d
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/0a265440987cc4e75053c9445cd2e39a/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/3b5d9efd4ea7fd3d66d424fb0fea7c4a/print-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/3b5d9efd4ea7fd3d66d424fb0fea7c4a/print-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/f507677c6662b00d06a76ae3071ad927/lifecycle-viewmodel-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/f507677c6662b00d06a76ae3071ad927/lifecycle-viewmodel-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/ace58725a593ebc3d8ac9a955443d5c1/exifinterface-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/ace58725a593ebc3d8ac9a955443d5c1/exifinterface-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/3f1ca0d4ddb8ff95c5d75eeb561077d3/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/3f1ca0d4ddb8ff95c5d75eeb561077d3/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/656cce252e6cdaaeba8fc2e27d0f43f7/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/656cce252e6cdaaeba8fc2e27d0f43f7/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/d4240c49df792c6de24dffaa45eb5ad3/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/d4240c49df792c6de24dffaa45eb5ad3/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:protolite-well-known-types:17.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/20e399eda898b815710c404b3feb4afb/jetified-protolite-well-known-types-17.0.0/AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:protolite-well-known-types:17.0.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/20e399eda898b815710c404b3feb4afb/jetified-protolite-well-known-types-17.0.0/AndroidManifest.xml:7:5-9:41
 MERGED from [io.grpc:grpc-android:1.21.0] /home/dungtv/.gradle/caches/transforms-2/files-2.1/7ba5d0beda8c5643417c9602f1922dd5/jetified-grpc-android-1.21.0/AndroidManifest.xml:7:5-9:41

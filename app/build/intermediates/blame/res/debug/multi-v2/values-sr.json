@@ -4,6 +4,23 @@
             "outputFile": "/home/dungtv/Documents/PhpProject/calltest/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sr/values-sr.xml",
             "map": [
                 {
+                    "source": "/home/dungtv/.gradle/caches/transforms-2/files-2.1/854d564236d235466151cdb8913f9b18/navigation-ui-2.2.2/res/values-sr/values-sr.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,162",
+                        "endColumns": "106,122",
+                        "endOffsets": "157,280"
+                    },
+                    "to": {
+                        "startLines": "47,48",
+                        "startColumns": "4,4",
+                        "startOffsets": "5480,5587",
+                        "endColumns": "106,122",
+                        "endOffsets": "5582,5705"
+                    }
+                },
+                {
                     "source": "/home/dungtv/.gradle/caches/transforms-2/files-2.1/be74a852e7d893d46ae57147185d5344/appcompat-1.0.0/res/values-sr/values-sr.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
@@ -13,11 +30,28 @@
                         "endOffsets": "209,312,418,504,608,726,807,887,978,1071,1167,1261,1362,1455,1550,1655,1746,1837,1925,2030,2138,2239,2343,2451,2552,2719,2816,2900"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,47",
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,49",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,214,317,423,509,613,731,812,892,983,1076,1172,1266,1367,1460,1555,1660,1751,1842,1930,2035,2143,2244,2348,2456,2557,2724,5480",
+                        "startOffsets": "105,214,317,423,509,613,731,812,892,983,1076,1172,1266,1367,1460,1555,1660,1751,1842,1930,2035,2143,2244,2348,2456,2557,2724,5710",
                         "endColumns": "108,102,105,85,103,117,80,79,90,92,95,93,100,92,94,104,90,90,87,104,107,100,103,107,100,166,96,83",
-                        "endOffsets": "209,312,418,504,608,726,807,887,978,1071,1167,1261,1362,1455,1550,1655,1746,1837,1925,2030,2138,2239,2343,2451,2552,2719,2816,5559"
+                        "endOffsets": "209,312,418,504,608,726,807,887,978,1071,1167,1261,1362,1455,1550,1655,1746,1837,1925,2030,2138,2239,2343,2451,2552,2719,2816,5789"
+                    }
+                },
+                {
+                    "source": "/home/dungtv/.gradle/caches/transforms-2/files-2.1/289224863560959127f92ff818916774/core-1.1.0/res/values-sr/values-sr.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "50",
+                        "startColumns": "4",
+                        "startOffsets": "5794",
+                        "endColumns": "100",
+                        "endOffsets": "5890"
                     }
                 },
                 {
@@ -52,23 +86,6 @@
                         "startOffsets": "3972",
                         "endColumns": "188",
                         "endOffsets": "4156"
-                    }
-                },
-                {
-                    "source": "/home/dungtv/.gradle/caches/transforms-2/files-2.1/896c349e2145d3162f06e2fa216401d3/core-1.0.0/res/values-sr/values-sr.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "48",
-                        "startColumns": "4",
-                        "startOffsets": "5564",
-                        "endColumns": "100",
-                        "endOffsets": "5660"
                     }
                 }
             ]

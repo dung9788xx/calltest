@@ -90,6 +90,7 @@ androidx/core/app/NotificationCompat$BadgeIconType.class
 androidx/core/app/NotificationCompat$GroupAlertBehavior.class
 androidx/core/app/NotificationCompat$NotificationVisibility.class
 androidx/core/app/NotificationCompat$StreamType.class
+androidx/core/app/RemoteInput$Source.class
 androidx/core/app/ServiceCompat$StopForegroundFlags.class
 androidx/core/content/PermissionChecker$PermissionResult.class
 androidx/core/content/pm/PermissionInfoCompat$Protection.class
@@ -139,6 +140,8 @@ androidx/multidex/MultiDexExtractor$ExtractedDex.class
 androidx/multidex/MultiDexExtractor.class
 androidx/multidex/ZipUtil$CentralDirectory.class
 androidx/multidex/ZipUtil.class
+androidx/navigation/NavDestination$ClassType.class
+androidx/navigation/Navigator$Name.class
 androidx/recyclerview/widget/RecyclerView$EdgeEffectFactory$EdgeDirection.class
 androidx/recyclerview/widget/RecyclerView$ItemAnimator$AdapterChanges.class
 androidx/recyclerview/widget/RecyclerView$Orientation.class
